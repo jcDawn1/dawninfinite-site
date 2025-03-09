@@ -1,7 +1,7 @@
 /* 🌟 General Page Styling */
 body {
-    font-family: Arial, sans-serif;
-    background-color: #FAF3E0; /* ✅ Cream color */
+    font-family: 'Raleway', sans-serif;
+    background-color: #FAF3E0; /* ✅ Cream background */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -27,6 +27,8 @@ nav ul li a {
     font-weight: bold;
     padding: 10px;
     display: inline-block;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
 
 nav ul li a:hover {
@@ -34,7 +36,8 @@ nav ul li a:hover {
 }
 
 /* 🌟 Headings */
-h1 {
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
     color: #333; /* 🔹 Update to match your logo */
     font-size: 2em;
     margin-top: 20px;
@@ -62,8 +65,20 @@ p {
     text-decoration: none;
     font-weight: bold;
     border-radius: 5px;
+    font-family: 'Oswald', sans-serif;
+    text-transform: uppercase;
 }
 
 .button:hover {
     background-color: #444; /* 🔹 Update hover color */
+}
+
+/* 🌟 Quote Styling */
+blockquote {
+    font-family: 'Bebas Neue', sans-serif;
+    font-size: 1.5em;
+    font-style: italic;
+    color: #555;
+    margin: 20px auto;
+    max-width: 600px;
 }
