@@ -161,3 +161,23 @@ p {
     color: #111; /* ✅ Dark text for contrast */
     border: 2px solid #eaeaea;
 }
+
+/* 🌟 Footer Styling */
+footer {
+    background-color: #111; /* Dark background for contrast */
+    color: #eaeaea; /* Light text for readability */
+    text-align: center;
+    padding: 15px;
+    font-size: 1em;
+    margin-top: 40px;
+}
+
+footer a {
+    color: #c2a14a; /* Muted gold for style */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    color: #eaeaea; /* Turns white on hover */
+}
