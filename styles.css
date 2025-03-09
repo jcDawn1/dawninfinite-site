@@ -1,7 +1,7 @@
 /* 🌟 General Page Styling */
 body {
     font-family: Arial, sans-serif;
-    background-color: #f4f4f4; /* 🔹 Replace with your logo background color */
+    background-color: #FAF3E0; /* ✅ Cream color */
     margin: 0;
     padding: 0;
     text-align: center;
@@ -12,7 +12,7 @@ nav ul {
     list-style-type: none;
     padding: 0;
     margin: 0;
-    background-color: #222; /* 🔹 Replace with your navbar color */
+    background-color: #222; /* 🔹 Update to match your logo */
     overflow: hidden;
 }
 
@@ -23,26 +23,26 @@ nav ul li {
 
 nav ul li a {
     text-decoration: none;
-    color: white; /* 🔹 Replace with your link color */
+    color: white; /* 🔹 Update to match your logo */
     font-weight: bold;
     padding: 10px;
     display: inline-block;
 }
 
 nav ul li a:hover {
-    background-color: #444; /* 🔹 Replace with a hover color from your logo */
+    background-color: #444; /* 🔹 Update hover effect */
 }
 
 /* 🌟 Headings */
 h1 {
-    color: #333; /* 🔹 Replace with a heading color from your logo */
+    color: #333; /* 🔹 Update to match your logo */
     font-size: 2em;
     margin-top: 20px;
 }
 
 /* 🌟 Paragraphs */
 p {
-    color: #666; /* 🔹 Replace with text color from your logo */
+    color: #666; /* 🔹 Update text color */
     font-size: 1.2em;
 }
 
@@ -56,8 +56,8 @@ p {
 /* 🌟 Button Styling */
 .button {
     display: inline-block;
-    background-color: #222; /* 🔹 Replace with button color */
-    color: white; /* 🔹 Replace with button text color */
+    background-color: #222; /* 🔹 Update to match your logo */
+    color: white; /* 🔹 Update button text */
     padding: 10px 20px;
     text-decoration: none;
     font-weight: bold;
@@ -65,5 +65,5 @@ p {
 }
 
 .button:hover {
-    background-color: #444; /* 🔹 Replace with hover color */
+    background-color: #444; /* 🔹 Update hover color */
 }
