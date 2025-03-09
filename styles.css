@@ -1,33 +1,123 @@
-/* 🌟 Styled Quote Improvements */
-.styled-quote {
-    font-family: 'Playfair Display', serif;
-    font-style: italic;
-    font-size: 1.5em;
-    color: #666; /* Darkened for better contrast */
+/* 🌟 General Page Styling */
+body {
+    font-family: 'Raleway', sans-serif;
+    background-color: #FAF3E0; /* ✅ Cream background for elegance */
+    margin: 0;
+    padding: 0;
     text-align: center;
-    margin: 30px auto;
+}
+
+/* 🌟 Navigation Bar (Restored & Centered) */
+nav {
+    background-color: #111; /* ✅ Dark, industrial metal aesthetic */
+    padding: 15px 0;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000; /* ✅ Ensures it stays on top */
+    display: flex;
+    justify-content: center;
+}
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 30px;
+}
+
+nav ul li {
+    display: inline;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #eaeaea; /* ✅ Soft white for sleek contrast */
+    font-family: 'Oswald', sans-serif;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: 1.1em;
+    letter-spacing: 1px;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #c2a14a; /* ✅ Muted gold for a metal-inspired touch */
+}
+
+/* 🌟 Fix Overlapping Content by Adding Padding */
+.container {
+    max-width: 900px;
+    margin: auto;
+    padding: 100px 20px 20px; /* ✅ Adjusted top padding to prevent content from hiding under navbar */
+}
+
+/* 🌟 Headings */
+h1, h2, h3 {
+    font-family: 'Montserrat', sans-serif;
+    color: #1a1a1a; /* ✅ Deep ink for strong yet elegant contrast */
+    font-size: 2.5em;
+    margin-top: 40px;
+    letter-spacing: 2px; /* Subtle letter spacing for a sleek look */
+    text-transform: uppercase;
+}
+
+/* 🌟 Body Text */
+p {
+    font-family: 'Raleway', sans-serif;
+    color: #555; /* ✅ Darker shade for readability */
+    font-size: 1.3em;
+    line-height: 1.8;
+    max-width: 800px;
+    margin: 20px auto;
+}
+
+/* 🌟 Styled Quote (Upgraded Design) */
+.styled-quote {
+    font-family: 'Playfair Display', serif; /* ✅ Cinematic and refined */
+    font-style: italic;
+    font-size: 1.6em;
+    color: #444; /* ✅ Slightly darker for better contrast */
+    text-align: center;
+    margin: 40px auto;
     max-width: 700px;
-    border-left: 4px solid #c2a14a;
-    padding-left: 20px;
+    padding: 30px;
+    position: relative;
+}
+
+/* 🔥 Replaces the Yellow Line with a Custom Decorative Element */
+.styled-quote::before {
+    content: "“";
+    font-size: 3em;
+    font-weight: bold;
+    color: #c2a14a; /* ✅ Muted gold for style */
+    position: absolute;
+    left: -10px;
+    top: -5px;
+}
+
+.styled-quote::after {
+    content: "”";
+    font-size: 3em;
+    font-weight: bold;
+    color: #c2a14a;
+    position: absolute;
+    right: -10px;
+    bottom: -5px;
 }
 
 .styled-quote cite {
-    font-size: 1em;
+    font-size: 1.1em;
     display: block;
-    margin-top: 10px;
-    color: #444; /* Darker for better visibility */
-}
-
-/* 🌟 Improve Readability of Intro Paragraph */
-.container p {
-    color: #555; /* Darker shade for better readability */
-    font-size: 1.3em; /* Slightly larger for clarity */
-    line-height: 1.8; /* Improves readability */
+    margin-top: 15px;
+    color: #777; /* ✅ More subtle but readable */
 }
 
 /* 🌟 Improve Gear List */
 .container ul {
-    list-style-type: none; /* Removes default bullets */
+    list-style-type: none; /* ✅ Removes default bullets */
     padding: 0;
     margin: 20px 0;
 }
@@ -40,12 +130,34 @@
     position: relative;
 }
 
-/* 🌟 Custom Bullet Effect (if we want a visual indicator) */
+/* 🌟 Custom Bullet Effect */
 .container ul li::before {
-    content: "●"; /* Custom bullet */
-    color: #c2a14a; /* Gold accent */
+    content: "●"; /* ✅ Custom bullet */
+    color: #c2a14a; /* ✅ Gold accent */
     font-size: 1.2em;
     position: absolute;
     left: 0;
     top: 0;
+}
+
+/* 🌟 Buttons */
+.button {
+    display: inline-block;
+    background-color: #222; /* ✅ Dark base for bold contrast */
+    color: white;
+    padding: 12px 25px;
+    text-decoration: none;
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.1em;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: 5px;
+    border: 2px solid #c2a14a; /* ✅ Subtle metal-gold border */
+    transition: background 0.3s ease, color 0.3s ease, border 0.3s ease;
+}
+
+.button:hover {
+    background-color: #c2a14a; /* ✅ Turns gold on hover */
+    color: #111; /* ✅ Dark text for contrast */
+    border: 2px solid #eaeaea;
 }
