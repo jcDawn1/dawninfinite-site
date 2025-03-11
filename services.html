@@ -1,63 +1,249 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Types of Video Work - Dawn Infinite</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Services</title>
+  <!-- Google Fonts: Multiple families for varied typography -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" 
+    rel="stylesheet"
+  >
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      background-color: #f5f1e9; /* Soft beige */
+      color: #000;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: #4e342e; /* Matches the footer */
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff; /* Same as footer text */
+      font-family: 'Montserrat', sans-serif; /* Nav font */
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* Content Wrapper */
+    .content-wrapper {
+      max-width: 1000px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Blockquote (Quote) */
+    blockquote {
+      font-family: 'Lora', serif; /* Quote font */
+      color: #cc9966; /* Makes the quote stand out */
+      font-style: italic;
+      margin: 1rem auto;
+      max-width: 800px;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    blockquote p {
+      text-align: right;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+
+    /* Page Heading */
+    h1 {
+      font-family: 'Playfair Display', serif; /* H1 font */
+      text-align: center;
+      margin: 1.5rem 0 1rem 0;
+      font-weight: 700;
+    }
+
+    /* Intro Paragraph */
+    .intro-text {
+      font-family: 'Roboto', sans-serif; /* Body paragraphs */
+      max-width: 800px;
+      margin: 0.5rem auto 2rem auto;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    /* Section Wrapper */
+    .section-wrapper {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .section-wrapper h2 {
+      font-family: 'Playfair Display', serif; /* Section headings */
+      text-align: center;
+      margin: 1.5rem 0 1rem 0;
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .service-list {
+      list-style-type: none;
+      margin-left: 0;
+      padding-left: 0;
+      font-family: 'Roboto', sans-serif; /* Lists in body font */
+      font-weight: 400;
+    }
+
+    .service-list li {
+      margin-bottom: 1.5rem;
+    }
+
+    .service-title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 0.3rem;
+      font-family: 'Roboto', sans-serif;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4e342e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      font-family: 'Montserrat', sans-serif; /* Matches nav */
+      font-weight: 700;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="gear.html">Gear and Skills</a></li>
-                <li><a href="services.html">Types of Video Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <h1>CINEMATIC VISIONS, REAL LIFE STORIES</h1>
-        <p>Whether you're looking to capture a once-in-a-lifetime event or need high-quality production for your business, my work is driven by authentic storytelling and cinematic quality.</p>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gear.html">Gear &amp; Skills</a></li>
+        <li><a href="services.html">Types of Video Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section>
-            <h2>Wedding Films</h2>
-            <p>From heartfelt vows to unforgettable dance floor moments, I create wedding films that capture the **emotion, energy, and essence** of your special day.</p>
-        </section>
+  <div class="content-wrapper">
+    <blockquote>
+      "Videography is the art of turning fleeting moments 
+      into timeless narratives for everyone to cherish."
+      <p>Unknown</p>
+    </blockquote>
 
-        <section>
-            <h2>Live Events & Concerts</h2>
-            <p>High-energy, dynamic coverage of live events, music performances, and gatherings, ensuring every important moment is documented **with clarity and impact**.</p>
-        </section>
+    <h1>Services</h1>
+    <p class="intro-text">
+      I believe every project deserves skill, vision, and a personal touch. 
+      Below, you’ll find the core services I offer, each handled 
+      with creativity, empathy, and unwavering professionalism.
+    </p>
 
-        <section>
-            <h2>Short-Form Content Creation</h2>
-            <p>Perfect for brands, influencers, and businesses looking to engage audiences with **quick, visually compelling, and story-driven video content**.</p>
-        </section>
+    <div class="section-wrapper">
+      <h2>My Services</h2>
+      <ul class="service-list">
+        <li>
+          <p class="service-title">Wedding Videography</p>
+          <p>
+            I capture each laugh, tear, and embrace so you can revisit the happiest day of your life 
+            long after the final dance. My cinematic approach crafts an elegant, heartfelt keepsake 
+            you’ll treasure for years to come.
+          </p>
+        </li>
 
-        <section>
-            <h2>Confidential & Exclusive Professional Video Production</h2>
-            <p>Private, high-quality video production services for **discreet and exclusive clients**, ensuring professionalism, confidentiality, and high-end cinematic results.</p>
-        </section>
+        <li>
+          <p class="service-title">Live Event Coverage</p>
+          <p>
+            From corporate gatherings to private celebrations, I document events with precision 
+            while maintaining a discreet presence. Your guests and partners will appreciate 
+            the polished highlight that tells your story long after the event closes.
+          </p>
+        </li>
 
-        <section>
-            <h2>Corporate & Business Films</h2>
-            <p>Professional brand storytelling, product showcases, and promotional videos tailored to help businesses connect with their audience **through compelling visuals**.</p>
-        </section>
+        <li>
+          <p class="service-title">Concert Videography</p>
+          <p>
+            Music is all about energy, passion, and connection. With multi-angle coverage 
+            and dynamic editing, I bring each performance to life on screen, letting fans 
+            relive the excitement and newcomers feel like they're front row.
+          </p>
+        </li>
 
-        <section class="cta-section">
-            <h2>Have Questions? Let’s Talk.</h2>
-            <p>Need more details about my services, pricing, or availability? Click below to get in touch.</p>
-            <a href="contact.html" class="contact-button">Contact Me</a>
-        </section>
-    </main>
+        <li>
+          <p class="service-title">Professional Video Editing &amp; Color Grading</p>
+          <p>
+            Let me elevate your raw footage through a seamless post-production process. 
+            I fuse creative storytelling with meticulous color work to keep viewers 
+            engaged and ensure your project looks its absolute best.
+          </p>
+        </li>
 
-    <footer>
-        <p>Contact: <a href="mailto:j_c@dawninfinite.com">j_c@dawninfinite.com</a> | Phone: <a href="tel:8156818696">(815) 681-8696</a></p>
-    </footer>
+        <li>
+          <p class="service-title">Highlight Reels &amp; Promotional Videos</p>
+          <p>
+            If you need a concise way to showcase your brand, project, or special occasion, 
+            I craft short-form videos that leave a memorable impact. Ideal for social media, 
+            marketing campaigns, or personal portfolios.
+          </p>
+        </li>
+
+        <li>
+          <p class="service-title">Confidential &amp; Discreet Adult Content Filming</p>
+          <p>
+            Privacy and respect guide this specialized service. I provide a secure atmosphere 
+            with absolute confidentiality, focusing on helping you realize your vision 
+            without compromising comfort or integrity.
+          </p>
+        </li>
+      </ul>
+    </div>
+  </div> <!-- End content-wrapper -->
+
+  <footer>
+    <p>j_c@dawninfinite.com | (815)681-8696</p>
+    <p>
+      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">
+        Visit Us On Facebook
+      </a>
+    </p>
+  </footer>
+
 </body>
 </html>
