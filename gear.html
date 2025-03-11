@@ -1,87 +1,320 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Gear and Skills - Dawn Infinite</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Gear & Skills</title>
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f5f1e9; /* Soft beige */
+      color: #000; /* Black text */
+      padding: 20px;
+      line-height: 1.6;
+    }
+
+    header {
+      text-align: center;
+      margin-bottom: 2rem;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+      margin-bottom: 1rem;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #000;
+      font-weight: bold;
+      font-size: 0.9rem;
+    }
+
+    blockquote {
+      font-style: italic;
+      margin: 1rem auto;
+      max-width: 800px;
+    }
+
+    blockquote p {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    h1, h2 {
+      text-align: center;
+      margin: 1.5rem 0 1rem 0;
+    }
+
+    /* Intro Paragraph */
+    .intro-text {
+      max-width: 800px;
+      margin: 0.5rem auto 2rem auto;
+      text-align: center;
+    }
+
+    .section-wrapper {
+      max-width: 800px;
+      margin: 0 auto 2rem auto;
+    }
+
+    .section-wrapper h2 {
+      font-size: 1.5rem;
+      text-transform: uppercase;
+      letter-spacing: 1px;
+      margin-bottom: 1rem;
+    }
+
+    .gear-list {
+      list-style-type: disc;
+      margin-left: 1.5rem;
+    }
+
+    .gear-list li {
+      margin: 0.5rem 0;
+    }
+
+    .gear-item-title {
+      font-weight: bold;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4e342e; /* Dark brown */
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: bold;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="gear.html">Gear and Skills</a></li>
-                <li><a href="services.html">Types of Video Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="quote-section">
-            <blockquote>
-                "The camera is simply a tool. You learn to use it to express your vision, but it’s never about the gear—it’s about what you do with it."
-                <br>
-                <span class="quote-author">– Roger Deakins</span>
-            </blockquote>
-        </section>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="#">Home</a></li>
+        <li><a href="#">Portfolio</a></li>
+        <li><a href="#">Blog</a></li>
+        <li><a href="#">Gear & Skills</a></li>
+        <li><a href="#">Types of Video Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </nav>
 
-        <section>
-            <h1>GEAR & SKILLS</h1>
-            <p>Filmmaking is more than just cameras, lights, and lenses. It’s about capturing a vision and bringing it to life. The right tools enhance creativity, but skill, experience, and artistry make the difference. Below is a breakdown of the gear I trust and the expertise that shapes my work.</p>
-        </section>
+    <blockquote>
+      "The camera is simply a tool. You learn to use it to express your vision, 
+      but it's never about the gear, it's about what you do with it."
+      <p>Roger Deakins</p>
+    </blockquote>
 
-        <section>
-            <h2>Camera Gear</h2>
-            <ul>
-                <li><strong>Blackmagic Pocket Cinema Camera 4K</strong> – High-quality 4K video production.</li>
-                <li><strong>iPhone 16 Pro (Blackmagic iOS App)</strong> – On-the-go shooting with pro controls.</li>
-                <li><strong>DJI OM 4 Gimbal</strong> – Smooth cinematic stabilization.</li>
-                <li><strong>Manfrotto MVH502A Fluid Head Tripod</strong> – Professional motion and stability.</li>
-                <li><strong>ND Filters & Diffusion</strong> – Controlling light for creative exposure.</li>
-            </ul>
-        </section>
+    <h1>Gear & Skills</h1>
+    <p class="intro-text">
+      Filmmaking is more than just cameras, lights, and lenses. It’s about capturing a vision 
+      and bringing it to life. The right tools enhance creativity, but skill, experience, 
+      and artistry make the difference. Below is a breakdown of the gear I trust 
+      and the expertise that shapes my work.
+    </p>
+  </header>
 
-        <section>
-            <h2>Audio Equipment</h2>
-            <ul>
-                <li><strong>Rode Shotgun Mic</strong> – Crisp directional audio for film.</li>
-                <li><strong>Zoom H6 Handy Recorder</strong> – High-quality multi-track audio recording.</li>
-                <li><strong>Rode Wireless Lapel Mic</strong> – Clear and mobile audio capture.</li>
-                <li><strong>Sennheiser & Sony Studio Headphones</strong> – Precise audio monitoring.</li>
-            </ul>
-        </section>
+  <main>
 
-        <section>
-            <h2>Lighting & Accessories</h2>
-            <ul>
-                <li><strong>Aputure Amaran 100x</strong> – Powerful and versatile lighting.</li>
-                <li><strong>Two Aputure Amaran 60x Lights</strong> – Perfect for dynamic lighting setups.</li>
-                <li><strong>Lighting Diffusion & Grids</strong> – Controlling light for different moods.</li>
-                <li><strong>RGB Camera Light & Color Gels</strong> – Adding creative and dramatic effects.</li>
-            </ul>
-        </section>
+    <!-- Skills Section -->
+    <div class="section-wrapper">
+      <h2>Skills</h2>
+      <ul class="gear-list">
+        <li>Videographer for Weddings, Live Events, and Concerts</li>
+        <li>Digital Filmmaking Student, LA Film School</li>
+        <li>Owner of Dawn Infinite Imagery</li>
+        <li>Proficient in Video Editing and Color Grading</li>
+      </ul>
+    </div>
 
-        <section>
-            <h2>Editing & Post-Production</h2>
-            <ul>
-                <li><strong>Adobe Premiere Pro & DaVinci Resolve</strong> – Precision editing and color grading.</li>
-                <li><strong>Adobe Photoshop & Logic Pro</strong> – Visual and audio post-production.</li>
-                <li><strong>4TB External SSD Storage</strong> – Fast and reliable media storage.</li>
-            </ul>
-        </section>
+    <!-- Camera Gear Section -->
+    <div class="section-wrapper">
+      <h2>Camera Gear</h2>
+      <ul class="gear-list">
+        <li>
+          <span class="gear-item-title">Blackmagic Pocket Cinema Camera 4K</span>
+          , high-quality 4K video production.
+        </li>
+        <li>
+          <span class="gear-item-title">iPhone 16 Pro (Blackmagic iOS App)</span>
+          , on-the-go shooting with pro controls.
+        </li>
+        <li>
+          <span class="gear-item-title">DJI OM 4 Gimbal</span>
+          , smooth cinematic stabilization.
+        </li>
+        <li>
+          <span class="gear-item-title">Manfrotto MVH502A Fluid Head & 546B Tripod</span>
+          , professional motion and stability.
+        </li>
+        <li>
+          <span class="gear-item-title">ND Filters (Variable ND2–ND400) & Diffusion</span>
+          , controlling light for creative exposure.
+        </li>
+        <li>
+          <span class="gear-item-title">SmallRig LP-E6NH batteries & charger</span>
+          , reliable power for long shoots.
+        </li>
+        <li>
+          <span class="gear-item-title">Westcott NP-F970 batteries</span>
+          , additional power solutions.
+        </li>
+        <li>
+          <span class="gear-item-title">GVM V-Mount Battery BV-95 (x3)</span>
+          , extended runtime for professional setups.
+        </li>
+        <li>
+          <span class="gear-item-title">6 ft selfie stick</span>
+          , unique angles and creative perspectives.
+        </li>
+      </ul>
 
-        <section>
-            <h2>Continuous Learning & Growth</h2>
-            <p>The tools of filmmaking evolve, but the art of storytelling remains timeless. Staying ahead means embracing new technology, refining techniques, and constantly pushing creative boundaries. The journey of a filmmaker is never finished—it’s an ever-evolving craft.</p>
-        </section>
-    </main>
+      <!-- Lens Sub-section -->
+      <h3 style="text-align:center; margin-top: 1.5rem;">Lenses</h3>
+      <ul class="gear-list">
+        <li>
+          <span class="gear-item-title">Micro 4/3 Lenses</span>:
+          12mm, 25mm, 50mm, 45-150mm zoom.
+        </li>
+        <li>
+          <span class="gear-item-title">iPhone 16 Pro Lenses</span>:
+          13mm, 24mm, 28mm, 35mm.
+        </li>
+      </ul>
+    </div>
 
-    <footer>
-        <p>Contact: <a href="mailto:j_c@dawninfinite.com">j_c@dawninfinite.com</a> | Phone: <a href="tel:8156818696">(815) 681-8696</a></p>
-    </footer>
+    <!-- Audio Equipment Section -->
+    <div class="section-wrapper">
+      <h2>Audio Equipment</h2>
+      <ul class="gear-list">
+        <li>
+          <span class="gear-item-title">Rode Shotgun Mic</span>
+          , crisp directional audio for film.
+        </li>
+        <li>
+          <span class="gear-item-title">Rode Lapel Mic (wireless)</span>
+          , discreet and mobile audio capture.
+        </li>
+        <li>
+          <span class="gear-item-title">Zoom H6 Handy Recorder</span>
+          , high-quality multi-track audio recording.
+        </li>
+        <li>
+          <span class="gear-item-title">Sony Studio Headphones</span>
+          , reliable monitoring.
+        </li>
+        <li>
+          <span class="gear-item-title">Sennheiser Studio Headphones</span>
+          , precise audio referencing.
+        </li>
+        <li>
+          <span class="gear-item-title">Extendable boom</span>
+          , versatile microphone placement.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Lighting & Accessories Section -->
+    <div class="section-wrapper">
+      <h2>Lighting & Accessories</h2>
+      <ul class="gear-list">
+        <li>
+          <span class="gear-item-title">Aputure Light Dome II Softbox</span>
+          , soft and diffused lighting.
+        </li>
+        <li>
+          <span class="gear-item-title">Aputure Amaran 100x</span>
+          , powerful and versatile lighting.
+        </li>
+        <li>
+          <span class="gear-item-title">Two Aputure Amaran 60x lights (with barn doors)</span>
+          , perfect for dynamic lighting setups.
+        </li>
+        <li>
+          <span class="gear-item-title">RGB camera light</span>
+          , colorful and dramatic effects.
+        </li>
+        <li>
+          <span class="gear-item-title">Color gels</span>
+          , additional creative lighting control.
+        </li>
+        <li>
+          <span class="gear-item-title">Lighting diffusion & grids</span>
+          , shaping and controlling light.
+        </li>
+      </ul>
+    </div>
+
+    <!-- Editing & Post-Production Section -->
+    <div class="section-wrapper">
+      <h2>Editing & Post-Production</h2>
+      <ul class="gear-list">
+        <li>
+          <span class="gear-item-title">2022 M2 MacBook Pro 16"</span>
+          , powerful and efficient editing system.
+        </li>
+        <li>
+          <span class="gear-item-title">Adobe Premiere Pro 24</span>
+          , advanced editing workflow.
+        </li>
+        <li>
+          <span class="gear-item-title">DaVinci Resolve Studio 19</span>
+          , comprehensive color grading and finishing.
+        </li>
+        <li>
+          <span class="gear-item-title">Adobe Photoshop 24</span>
+          , graphics and image editing.
+        </li>
+        <li>
+          <span class="gear-item-title">Logic Pro 11 & Adobe Audition</span>
+          , professional audio post-production.
+        </li>
+        <li>
+          <span class="gear-item-title">4TB external SSD</span>
+          , fast and reliable media storage.
+        </li>
+        <li>
+          <span class="gear-item-title">4TB SSD for backups</span>
+          , secure and efficient archiving.
+        </li>
+      </ul>
+    </div>
+
+  </main>
+
+  <footer>
+    <p>j_c@dawninfinite.com | (815)681-8696</p>
+    <p>
+      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">
+        Visit Us On Facebook
+      </a>
+    </p>
+  </footer>
+
 </body>
 </html>
