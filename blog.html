@@ -1,50 +1,201 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Blog - Dawn Infinite</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>The Blog</title>
+  <!-- Google Fonts: Multiple families for varied typography -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" 
+    rel="stylesheet"
+  >
+  <style>
+    /* Basic Reset */
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    /* Body Styling */
+    body {
+      background-color: #f5f1e9; /* Soft beige */
+      color: #000;
+      margin: 0;
+      line-height: 1.6;
+    }
+
+    /* Header & Nav */
+    header {
+      background-color: #4e342e; /* Matches the footer */
+      padding: 1rem 0;
+      text-align: center;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style-type: none;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff; /* Same as footer text */
+      font-family: 'Montserrat', sans-serif; /* Nav font */
+      font-weight: 700;
+      font-size: 0.9rem;
+    }
+
+    /* Content Wrapper */
+    .content-wrapper {
+      max-width: 1000px;
+      margin: 2rem auto 4rem auto;
+      padding: 0 1rem;
+    }
+
+    /* Blockquote (Quote) */
+    blockquote {
+      font-family: 'Lora', serif; /* Quote font */
+      color: #cc9966; /* Makes the quote stand out */
+      font-style: italic;
+      margin: 1rem auto;
+      max-width: 800px;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    blockquote p {
+      text-align: right;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+
+    /* Main Heading */
+    h1 {
+      font-family: 'Playfair Display', serif; /* H1 font */
+      text-align: center;
+      margin: 1.5rem 0 1rem 0;
+      font-weight: 700;
+    }
+
+    /* Intro Paragraph */
+    .intro-text {
+      font-family: 'Roboto', sans-serif; /* Body paragraphs */
+      max-width: 800px;
+      margin: 0.5rem auto 2rem auto;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    /* Section for Blog Links */
+    .section-wrapper {
+      max-width: 800px;
+      margin: 2rem auto;
+    }
+
+    .section-wrapper h2 {
+      font-family: 'Playfair Display', serif; /* Section headings */
+      text-align: left;
+      margin: 1rem 0 0.5rem 0;
+      font-size: 1.3rem;
+      letter-spacing: 1px;
+      font-weight: 700;
+    }
+
+    .blog-list, .category-list, .recent-posts {
+      font-family: 'Roboto', sans-serif; /* Lists in body font */
+      list-style-type: disc;
+      margin-left: 1.5rem;
+      font-weight: 400;
+    }
+
+    .blog-list li, .category-list li, .recent-posts li {
+      margin: 0.5rem 0;
+    }
+
+    /* Footer */
+    footer {
+      background-color: #4e342e;
+      color: #fff;
+      text-align: center;
+      padding: 1rem 0;
+      position: fixed;
+      width: 100%;
+      bottom: 0;
+      left: 0;
+      font-family: 'Montserrat', sans-serif; /* Matches nav */
+      font-weight: 700;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* Optional: Add some margin at the bottom so content doesn't hide under the fixed footer */
+    .push-bottom {
+      margin-bottom: 100px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="gear.html">Gear and Skills</a></li>
-                <li><a href="services.html">Types of Video Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <section class="quote-section">
-            <blockquote>
-                "A film is never really good unless the camera is an eye in the head of a poet."
-                <br>
-                <span class="quote-author">– Orson Welles</span>
-            </blockquote>
-        </section>
+  <header>
+    <nav>
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="gear.html">Gear &amp; Skills</a></li>
+        <li><a href="services.html">Types of Video Work</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+  </header>
 
-        <section>
-            <h1>BLOG</h1>
-            <p>Welcome to my blog, where I share insights, experiences, and reflections on the art of filmmaking and storytelling.</p>
-        </section>
+  <div class="content-wrapper push-bottom">
+    <blockquote>
+      "I don't know why people expect art to make sense. They accept the fact that life doesn't make sense."
+      <p>David Lynch</p>
+    </blockquote>
 
-        <section>
-            <h2>Latest Posts</h2>
-            <div class="blog-post">
-                <h3><a href="blog-post-1.html">The Unscripted Philosophy</a></h3>
-                <p>Capturing real moments over forced perfection—why authentic storytelling matters.</p>
-            </div>
-        </section>
-    </main>
+    <h1>The Blog</h1>
+    <p class="intro-text">
+      Welcome to my blogging space. Below, you’ll find links to categories of content 
+      and my latest post. Dive in and discover new insights on filmmaking, creativity, and more.
+    </p>
 
-    <footer>
-        <p>Contact: <a href="mailto:j_c@dawninfinite.com">j_c@dawninfinite.com</a> | Phone: <a href="tel:8156818696">(815) 681-8696</a></p>
-    </footer>
+    <div class="section-wrapper">
+      <h2>Categories</h2>
+      <ul class="category-list">
+        <li><a href="#">Filmmaking Insights</a></li>
+        <li><a href="#">Behind the Scenes</a></li>
+        <li><a href="#">Creative Struggles</a></li>
+        <li><a href="#">Gear Talk</a></li>
+      </ul>
+    </div>
+
+    <div class="section-wrapper">
+      <h2>Recent Posts</h2>
+      <ul class="recent-posts">
+        <li><a href="blog-post-1.html">The Art of Capturing Life: A Videographer’s Manifesto</a></li>
+      </ul>
+    </div>
+  </div> <!-- End content-wrapper -->
+
+  <footer>
+    <p>j_c@dawninfinite.com | (815)681-8696</p>
+    <p>
+      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">
+        Visit Us On Facebook
+      </a>
+    </p>
+  </footer>
+
 </body>
 </html>
