@@ -23,6 +23,7 @@
       color: #000;
       margin: 0;
       line-height: 1.6;
+      font-size: 16px;
     }
 
     /* Header & Nav */
@@ -106,29 +107,27 @@
       font-weight: 700;
     }
 
-    .blog-list, .category-list, .recent-posts {
+    .category-list, .recent-posts {
       font-family: 'Roboto', sans-serif; /* Lists in body font */
       list-style-type: disc;
       margin-left: 1.5rem;
       font-weight: 400;
+      margin-bottom: 2rem;
     }
 
-    .blog-list li, .category-list li, .recent-posts li {
+    .category-list li, .recent-posts li {
       margin: 0.5rem 0;
     }
 
-    /* Footer */
+    /* Footer (non-fixed) */
     footer {
       background-color: #4e342e;
       color: #fff;
       text-align: center;
       padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-      left: 0;
       font-family: 'Montserrat', sans-serif; /* Matches nav */
       font-weight: 700;
+      margin-top: 2rem;
     }
 
     footer a {
@@ -137,10 +136,6 @@
       font-weight: 700;
     }
 
-    /* Optional: Add some margin at the bottom so content doesn't hide under the fixed footer */
-    .push-bottom {
-      margin-bottom: 100px;
-    }
   </style>
 </head>
 <body>
@@ -158,22 +153,24 @@
     </nav>
   </header>
 
-  <div class="content-wrapper push-bottom">
+  <div class="content-wrapper">
     <blockquote>
-      "I don't know why people expect art to make sense. They accept the fact that life doesn't make sense."
+      "I don't know why people expect art to make sense. 
+      They accept the fact that life doesn't make sense."
       <p>David Lynch</p>
     </blockquote>
 
     <h1>The Blog</h1>
     <p class="intro-text">
-      Welcome to my blogging space. Below, you’ll find links to categories of content 
-      and my latest post. Dive in and discover new insights on filmmaking, creativity, and more.
+      Welcome to my blogging space. Below, you’ll find links to categories 
+      of content and my latest post. Dive in and discover new insights on 
+      filmmaking, creativity, and more.
     </p>
 
     <div class="section-wrapper">
       <h2>Categories</h2>
       <ul class="category-list">
-        <li><a href="#">Filmmaking Insights</a></li>
+        <li><a href="category-filmmaking-insights.html">Filmmaking Insights</a></li>
         <li><a href="#">Behind the Scenes</a></li>
         <li><a href="#">Creative Struggles</a></li>
         <li><a href="#">Gear Talk</a></li>
