@@ -97,9 +97,8 @@
       max-width: 800px;
       margin: 2rem auto;
       padding: 1rem;
-      background: #f5f1e9; /* Soft beige */
+      background: #f5f1e9; /* Match site background */
       border-radius: 8px;
-      border: 1px solid #bca897; /* Light brown border */
       text-align: center;
     }
 
@@ -108,6 +107,14 @@
       font-size: 1.8rem;
       color: #4e342e; /* Dark brown */
       margin-bottom: 1rem;
+    }
+
+    /* Custom Styling for Cusdis Comment Box */
+    .cusdis-thread {
+      font-family: 'Roboto', sans-serif !important;
+      background: transparent !important;
+      color: #4e342e !important;
+      border: none !important;
     }
 
     /* Footer */
@@ -170,25 +177,19 @@
       </ul>
     </div>
 
-    <!-- Giscus Comments Section -->
+    <!-- Cusdis Comments Section -->
     <div id="comments">
       <h2>Join the Discussion</h2>
-      <script src="https://giscus.app/client.js"
-          data-repo="jcDawn1/dawninfinite-site"
-          data-repo-id="R_kgDOOFyuPQ"
-          data-category="General"
-          data-category-id="DIC_kwDOOFyuPc4CoE7D"
-          data-mapping="title"
-          data-strict="1"
-          data-reactions-enabled="1"
-          data-emit-metadata="0"
-          data-input-position="top"
-          data-theme="light"
-          data-lang="en"
-          data-loading="lazy"
-          crossorigin="anonymous"
-          async>
-      </script>
+      <div id="cusdis_thread" 
+           data-host="https://cusdis.com"
+           data-app-id="c5bd9f9d-8580-41d5-91d7-52d0a8ae5e45"
+           data-page-id="blog-post-1"
+           data-page-url="https://YOUR_WEBSITE_URL/blog-post-1.html"
+           data-page-title="1. The Art of Capturing Life: A Videographer’s Manifesto"
+           data-theme="light"
+           data-lang="en">
+      </div>
+      <script async defer src="https://cusdis.com/js/cusdis.es.js"></script>
     </div>
   </div>
 
