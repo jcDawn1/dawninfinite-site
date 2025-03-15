@@ -25,10 +25,11 @@
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; /* Changed to cover for better image display */
+      background-size: contain; /* Ensures full image is visible without cropping */
       position: relative;
       display: flex;
       flex-direction: column;
+      align-items: center; /* Center content horizontally */
     }
 
     /* Fixed Header */
@@ -64,9 +65,9 @@
     /* Main Content */
     .content-wrapper {
       max-width: 800px;
-      margin: 2rem auto; /* Reduced margin */
-      padding: 1rem; /* Reduced padding */
-      text-align: justify;
+      margin: 3rem auto; /* Slightly increased margin for more spacing */
+      padding: 1.5rem; /* Slightly increased padding */
+      text-align: center; /* Center the text */
       position: relative;
       z-index: 1;
     }
@@ -78,38 +79,38 @@
       font-size: 3rem;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
       text-align: center;
-      margin: 2rem 0 1rem; /* Adjusted spacing */
+      margin: 3rem 0 2rem; /* Adjusted spacing */
     }
 
     /* Quote Styling */
     blockquote {
       font-family: 'Lora', serif;
       font-style: italic;
-      color: rgba(232, 199, 167, 0.9); /* Made translucent */
-      margin: 1rem 0; /* Reduced spacing */
+      color: rgba(232, 199, 167, 0.9);
+      margin: 2rem 0; /* Increased spacing */
       text-align: center;
     }
 
     blockquote p {
-      text-align: right;
+      text-align: center; /* Centered the attribution */
       font-weight: bold;
-      margin: 0.5rem 0 0;
+      margin: 1rem 0 0; /* Adjusted spacing */
     }
 
     /* Content Text */
     .content-wrapper h2,
     .content-wrapper p {
-      color: rgba(245, 241, 233, 0.9); /* Made translucent while keeping readable */
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Added shadow for better readability */
+      color: rgba(245, 241, 233, 0.9);
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
 
     .content-wrapper h2 {
       font-family: 'Playfair Display', serif;
-      margin: 1rem 0; /* Reduced spacing */
+      margin: 2rem 0; /* Increased spacing */
     }
 
     .content-wrapper p {
-      margin: 0.5rem 0; /* Reduced spacing */
+      margin: 1rem 0; /* Increased spacing */
     }
 
     /* Footer */
@@ -130,8 +131,6 @@
       color: inherit;
       text-decoration: none;
     }
-
-    /* Removed unnecessary spacer */
   </style>
 </head>
 <body>
