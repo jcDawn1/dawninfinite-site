@@ -18,29 +18,17 @@
       line-height: 1.6;
     }
 
-    /* Fullscreen Parallax Background */
+    /* Parallax Background */
     .parallax {
       background-image: url('hero-image.jpeg');
-      height: 100vh;
+      min-height: 100vh;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: contain; /* Ensures full image without cropping */
+      background-size: cover; /* Changed to cover for better image display */
+      position: relative;
       display: flex;
-      align-items: center;
-      justify-content: center;
-    }
-
-    /* Overlay Text */
-    .parallax h1 {
-      font-family: 'Playfair Display', serif;
-      color: white;
-      font-size: 3rem;
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
-      text-align: center;
-      background: rgba(0, 0, 0, 0.4); /* Subtle background to make text pop */
-      padding: 1rem;
-      border-radius: 8px;
+      flex-direction: column;
     }
 
     /* Fixed Header */
@@ -73,29 +61,55 @@
       font-weight: 700;
     }
 
-    /* Transparent Content Wrapper */
+    /* Main Content */
     .content-wrapper {
       max-width: 800px;
-      margin: 4rem auto;
-      padding: 2rem;
-      background-color: rgba(0, 0, 0, 0.5); /* Fully transparent overlay */
-      border-radius: 12px;
+      margin: 2rem auto; /* Reduced margin */
+      padding: 1rem; /* Reduced padding */
       text-align: justify;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Overlay Text */
+    .parallax h1 {
+      font-family: 'Playfair Display', serif;
+      color: white;
+      font-size: 3rem;
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      text-align: center;
+      margin: 2rem 0 1rem; /* Adjusted spacing */
     }
 
     /* Quote Styling */
     blockquote {
       font-family: 'Lora', serif;
       font-style: italic;
-      color: #e8c7a7;
-      margin-bottom: 2rem;
+      color: rgba(232, 199, 167, 0.9); /* Made translucent */
+      margin: 1rem 0; /* Reduced spacing */
       text-align: center;
     }
 
     blockquote p {
       text-align: right;
       font-weight: bold;
-      margin-top: 0.5rem;
+      margin: 0.5rem 0 0;
+    }
+
+    /* Content Text */
+    .content-wrapper h2,
+    .content-wrapper p {
+      color: rgba(245, 241, 233, 0.9); /* Made translucent while keeping readable */
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6); /* Added shadow for better readability */
+    }
+
+    .content-wrapper h2 {
+      font-family: 'Playfair Display', serif;
+      margin: 1rem 0; /* Reduced spacing */
+    }
+
+    .content-wrapper p {
+      margin: 0.5rem 0; /* Reduced spacing */
     }
 
     /* Footer */
@@ -109,6 +123,7 @@
       padding: 0.5rem 0;
       font-family: 'Montserrat', sans-serif;
       font-weight: bold;
+      z-index: 1002;
     }
 
     footer a {
@@ -116,11 +131,7 @@
       text-decoration: none;
     }
 
-    /* Buffer space at bottom */
-    .spacer {
-      height: 120px;
-    }
-
+    /* Removed unnecessary spacer */
   </style>
 </head>
 <body>
@@ -131,7 +142,7 @@
       <li><a href="index.html">Home</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
       <li><a href="blog.html">Blog</a></li>
-      <li><a href="gear.html">Gear &amp; Skills</a></li>
+      <li><a href="gear.html">Gear & Skills</a></li>
       <li><a href="services.html">Types of Video Work</a></li>
       <li><a href="contact.html">Contact</a></li>
     </ul>
@@ -140,26 +151,22 @@
 
 <div class="parallax">
   <h1>Cinematic Visions: Real Life Stories</h1>
+  <div class="content-wrapper">
+    <blockquote>
+      "A lot of people ask me if I think horror movies have an effect on audiences. I say, 'Sure. But so do romantic comedies, war movies, and Westerns.'"
+      <p>— Wes Craven</p>
+    </blockquote>
+
+    <h2>Welcome to Dawn Infinite Imagery</h2>
+    <p>I'm JC, the heart and soul behind the camera. My journey into videography wasn't traditional. After years of exploring various paths and never quite feeling settled, I found what I'd been searching for in videography. At 39, I discovered I'd been living with undiagnosed ADHD, which explained my lifelong search for creativity, excitement, and freedom. Then, I picked up a camera, and suddenly, everything clicked.</p>
+
+    <p>With videography, my mind is free to roam, explore, and create without limits. Whether capturing an emotional wedding ceremony, the energy of a live concert, or a spontaneous heartfelt moment, it's never the same experience twice, and that's exactly why I love it.</p>
+
+    <p>For me, it's not just about clients. By the time we finish a project, we've become friends. The greatest reward is seeing your vision come to life and witnessing the excitement in your eyes when you first view your story captured on film. Whether it's your wedding day, a live event, or any personal project, Dawn Infinite Imagery is here to ensure your unique story is told exactly how it deserves to be: authentically and beautifully.</p>
+
+    <p><strong>Together, let's bring your cinematic vision to reality.</strong></p>
+  </div>
 </div>
-
-<div class="content-wrapper">
-  <blockquote>
-    "A lot of people ask me if I think horror movies have an effect on audiences. I say, 'Sure. But so do romantic comedies, war movies, and Westerns.'"
-    <p>— Wes Craven</p>
-  </blockquote>
-
-  <h2>Welcome to Dawn Infinite Imagery</h2>
-  <p>I'm JC, the heart and soul behind the camera. My journey into videography wasn't traditional. After years of exploring various paths and never quite feeling settled, I found what I'd been searching for in videography. At 39, I discovered I'd been living with undiagnosed ADHD, which explained my lifelong search for creativity, excitement, and freedom. Then, I picked up a camera, and suddenly, everything clicked.</p>
-
-  <p>With videography, my mind is free to roam, explore, and create without limits. Whether capturing an emotional wedding ceremony, the energy of a live concert, or a spontaneous heartfelt moment, it's never the same experience twice, and that's exactly why I love it.</p>
-
-  <p>For me, it's not just about clients. By the time we finish a project, we've become friends. The greatest reward is seeing your vision come to life and witnessing the excitement in your eyes when you first view your story captured on film. Whether it's your wedding day, a live event, or any personal project, Dawn Infinite Imagery is here to ensure your unique story is told exactly how it deserves to be: authentically and beautifully.</p>
-
-  <p><strong>Together, let's bring your cinematic vision to reality.</strong></p>
-
-</div>
-
-<div class="spacer"></div>
 
 <footer>
   <p>j_c@dawninfinite.com | (815)681-8696</p>
