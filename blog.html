@@ -18,7 +18,6 @@
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
-      color: #f5f1e9; /* Light cream for main text */
       background-color: #FFFDD0; /* Cream background */
       height: 100%;
       overflow-x: hidden;
@@ -89,7 +88,7 @@
     blockquote {
       font-family: 'Lora', serif;
       font-style: italic;
-      color: #7B3F00; /* Darker orange-brown for quote */
+      color: #7B3F00; /* Light brown for quote */
       margin-bottom: 2rem;
       text-align: center;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
@@ -105,8 +104,8 @@
     .content-box h1,
     .content-box h2,
     .content-box p {
-      color: #f5f1e9; /* Light cream for main text */
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Enhanced shadow for readability */
+      color: #7B3F00; /* Light brown text */
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Subtle shadow for readability */
     }
 
     .content-box h1 {
@@ -119,6 +118,20 @@
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       margin: 1.5rem 0 1rem;
+    }
+
+    /* Link Styling */
+    .content-box a {
+      color: #A0522D; /* Lighter brown for links */
+      text-decoration: none; /* Remove default underline */
+      border-bottom: 2px solid #D2691E; /* Brighter cinnamon border */
+      font-family: 'Roboto', sans-serif;
+      transition: color 0.3s ease, border-color 0.3s ease;
+    }
+
+    .content-box a:hover {
+      color: #D2691E; /* Match border color on hover */
+      border-bottom-color: #A0522D; /* Lighter brown border on hover */
     }
 
     /* Footer */
