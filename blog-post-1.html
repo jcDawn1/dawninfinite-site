@@ -18,6 +18,9 @@
       color: #000;
       font-size: 16px;
       line-height: 1.6;
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
     }
 
     /* Fixed Header */
@@ -54,7 +57,8 @@
 
     /* Page Wrapper */
     .content-wrapper {
-      margin: 80px auto 140px auto;
+      flex: 1;
+      margin: 80px auto 100px auto;
       max-width: 800px;
       padding: 0 1rem;
     }
@@ -95,7 +99,7 @@
     /* Comments Section */
     #comments {
       max-width: 800px;
-      margin: 2rem auto;
+      margin: 2rem auto 4rem auto; /* Added extra space at the bottom */
       padding: 1rem;
       background: #f5f1e9; /* Match site background */
       border-radius: 8px;
