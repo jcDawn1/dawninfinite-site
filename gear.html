@@ -10,22 +10,16 @@
     rel="stylesheet"
   >
   <style>
-    /* Basic Reset */
+    /* Reset */
     html, body {
       margin: 0;
       padding: 0;
-    }
-    
-    body {
-      font-size: 16px;
-      line-height: 1.6;
       background-color: #f5f1e9; /* Soft beige */
       color: #000;
-      /* Add padding to prevent overlap with fixed header/footer */
-      padding-top: 80px;   /* Adjust according to header height */
-      padding-bottom: 80px; /* Adjust according to footer height */
+      font-size: 16px;
+      line-height: 1.6;
     }
-    
+
     /* Fixed Header */
     header {
       position: fixed;
@@ -37,7 +31,7 @@
       padding: 1rem 0;
       z-index: 1000;
     }
-    
+
     nav ul {
       display: flex;
       justify-content: center;
@@ -45,19 +39,19 @@
       margin: 0;
       padding: 0;
     }
-    
+
     nav ul li {
       margin: 0 1rem;
     }
-    
+
     nav ul li a {
       text-decoration: none;
       color: #fff;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Montserrat', sans-serif; /* Nav font */
       font-weight: 700;
       font-size: 0.9rem;
     }
-    
+
     /* Fixed Footer */
     footer {
       position: fixed;
@@ -72,20 +66,24 @@
       font-weight: 700;
       z-index: 1000;
     }
-    
+
     footer a {
       color: #fff;
       text-decoration: none;
       font-weight: 700;
     }
-    
-    /* Content Wrapper */
+
+    /* Main Content Wrapper */
     .content-wrapper {
+      /* 
+        Large top/bottom margins so the content 
+        doesn't hide under the fixed header or footer 
+      */
+      margin: 120px auto 120px auto;
       max-width: 1000px;
-      margin: 2rem auto;
       padding: 0 1rem;
     }
-    
+
     /* Blockquote (Quote) */
     blockquote {
       font-family: 'Lora', serif;
@@ -96,13 +94,13 @@
       text-align: center;
       font-weight: 400;
     }
-    
+
     blockquote p {
       text-align: right;
       font-weight: 700;
       margin-top: 0.5rem;
     }
-    
+
     /* Page Heading */
     h1 {
       font-family: 'Playfair Display', serif;
@@ -110,7 +108,7 @@
       margin: 1.5rem 0 1rem 0;
       font-weight: 700;
     }
-    
+
     /* Intro Paragraph */
     .intro-text {
       font-family: 'Roboto', sans-serif;
@@ -119,13 +117,13 @@
       text-align: center;
       font-weight: 400;
     }
-    
+
     /* Section Wrapper */
     .section-wrapper {
       max-width: 800px;
       margin: 2rem auto;
     }
-    
+
     .section-wrapper h2 {
       font-family: 'Playfair Display', serif;
       text-align: center;
@@ -135,18 +133,18 @@
       letter-spacing: 1px;
       font-weight: 700;
     }
-    
+
     .gear-list {
       list-style-type: disc;
       margin-left: 1.5rem;
       font-family: 'Roboto', sans-serif;
       font-weight: 400;
     }
-    
+
     .gear-list li {
       margin: 0.5rem 0;
     }
-    
+
     .gear-item-title {
       font-weight: 700;
     }
@@ -166,14 +164,14 @@
       </ul>
     </nav>
   </header>
-  
+
   <div class="content-wrapper">
     <blockquote>
       "The camera is simply a tool. You learn to use it to express your vision, 
       but it's never about the gear, it's about what you do with it."
       <p>Roger Deakins</p>
     </blockquote>
-    
+
     <h1>Gear &amp; Skills</h1>
     <p class="intro-text">
       Filmmaking is more than just cameras, lights, and lenses. It’s about capturing a vision 
@@ -181,7 +179,7 @@
       and artistry make the difference. Below is a breakdown of the gear I trust 
       and the expertise that shapes my work.
     </p>
-    
+
     <!-- Skills Section -->
     <div class="section-wrapper">
       <h2>Skills</h2>
@@ -192,7 +190,7 @@
         <li>Proficient in video editing and color grading</li>
       </ul>
     </div>
-    
+
     <!-- Camera Gear Section -->
     <div class="section-wrapper">
       <h2>Camera Gear</h2>
@@ -234,7 +232,7 @@
           unique angles and creative perspectives.
         </li>
       </ul>
-      
+
       <!-- Lens Sub-section -->
       <h3 style="font-family: 'Playfair Display', serif; text-align:center; margin-top: 2rem;">
         Lenses
@@ -250,7 +248,7 @@
         </li>
       </ul>
     </div>
-    
+
     <!-- Audio Equipment Section -->
     <div class="section-wrapper">
       <h2>Audio Equipment</h2>
@@ -281,7 +279,7 @@
         </li>
       </ul>
     </div>
-    
+
     <!-- Lighting & Accessories Section -->
     <div class="section-wrapper">
       <h2>Lighting &amp; Accessories</h2>
@@ -312,7 +310,7 @@
         </li>
       </ul>
     </div>
-    
+
     <!-- Editing & Post-Production Section -->
     <div class="section-wrapper">
       <h2>Editing &amp; Post-Production</h2>
@@ -347,9 +345,8 @@
         </li>
       </ul>
     </div>
-    
   </div> <!-- End content-wrapper -->
-  
+
   <footer>
     <p>j_c@dawninfinite.com | (815)681-8696</p>
     <p>
@@ -358,6 +355,5 @@
       </a>
     </p>
   </footer>
-  
 </body>
 </html>
