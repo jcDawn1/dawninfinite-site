@@ -28,7 +28,8 @@
       width: 100%;
       background-color: #4e342e; /* Dark brown */
       text-align: center;
-      padding: 1rem 0;
+      /* Slightly less padding to reduce overall header height */
+      padding: 0.5rem 0;
       z-index: 1000;
     }
 
@@ -47,7 +48,7 @@
     nav ul li a {
       text-decoration: none;
       color: #fff;
-      font-family: 'Montserrat', sans-serif; /* Nav font */
+      font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 0.9rem;
     }
@@ -61,7 +62,8 @@
       background-color: #4e342e;
       color: #fff;
       text-align: center;
-      padding: 1rem 0;
+      /* Slightly less padding to reduce overall footer height */
+      padding: 0.5rem 0;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       z-index: 1000;
@@ -76,10 +78,10 @@
     /* Main Content Wrapper */
     .content-wrapper {
       /* 
-        Large top/bottom margins so the content 
-        doesn't hide under the fixed header or footer 
+        Increased margin-top/bottom so content isn’t hidden 
+        behind the smaller header and footer 
       */
-      margin: 120px auto 120px auto;
+      margin: 80px auto 80px auto;
       max-width: 1000px;
       padding: 0 1rem;
     }
