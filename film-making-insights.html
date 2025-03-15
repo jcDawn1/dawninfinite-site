@@ -10,23 +10,22 @@
     rel="stylesheet"
   >
   <style>
-    /* Basic Reset */
-    * {
+    /* Basic Reset & Layout to ensure scrolling and footer at bottom */
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    /* Body Styling */
     body {
+      display: flex;
+      flex-direction: column;
       background-color: #f5f1e9; /* Soft beige */
       color: #000;
-      margin: 0;
       line-height: 1.6;
       font-size: 16px;
     }
 
-    /* Header & Nav */
     header {
       background-color: #4e342e; /* Dark brown */
       padding: 1rem 0;
@@ -37,6 +36,8 @@
       display: flex;
       justify-content: center;
       list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li {
@@ -51,17 +52,18 @@
       font-size: 0.9rem;
     }
 
-    /* Content Wrapper */
+    /* Main Content Wrapper */
     .content-wrapper {
+      flex: 1; /* Pushes footer down */
       max-width: 1000px;
       margin: 2rem auto;
-      padding: 0 1rem 4rem 1rem; /* Extra bottom padding for scrolling */
+      padding: 0 1rem;
     }
 
     /* Blockquote (Quote) */
     blockquote {
       font-family: 'Lora', serif;
-      color: #cc9966; 
+      color: #cc9966;
       font-style: italic;
       margin: 1rem auto;
       max-width: 800px;
@@ -118,7 +120,7 @@
       margin: 0.5rem 0;
     }
 
-    /* Footer (non-fixed) */
+    /* Footer at bottom */
     footer {
       background-color: #4e342e;
       color: #fff;
@@ -126,7 +128,7 @@
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       padding: 1rem 0;
-      margin-top: 2rem;
+      margin-top: auto; /* Ensures footer stays at bottom */
     }
 
     footer a {
