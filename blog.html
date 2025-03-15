@@ -2,182 +2,199 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>The Blog</title>
-  <!-- Google Fonts: Multiple families for varied typography -->
+  <title>The Blog - Dawn Infinite Imagery</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" 
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+
   <style>
-    /* Reset */
+    /* Reset Styles */
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #f5f1e9; /* Soft beige */
-      color: #000;
-      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      color: #f5f1e9;
+      background-color: rgb(78, 52, 46); /* Solid brown background */
+      height: 100%;
+      overflow-x: hidden;
       line-height: 1.6;
     }
-    
+
+    /* Main Content Container */
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 1.5rem 3rem;
+      text-align: center;
+    }
+
     /* Fixed Header */
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #4e342e; /* Dark brown */
-      text-align: center;
-      padding: 0.5rem 0;
-      z-index: 1000;
+      background-color: rgba(60, 40, 35, 0.85); /* Darker brown from last code */
+      padding: 0.5rem 1rem;
+      z-index: 1002;
+      display: flex;
+      align-items: center;
     }
-    
+
+    .header-image {
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
+    }
+
+    nav {
+      flex: 1;
+    }
+
     nav ul {
       display: flex;
       justify-content: center;
-      list-style-type: none;
-      margin: 0;
+      list-style: none;
       padding: 0;
+      margin: 0;
     }
-    
+
     nav ul li {
       margin: 0 1rem;
     }
-    
+
     nav ul li a {
       text-decoration: none;
       color: #fff;
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 0.9rem;
     }
-    
-    /* Fixed Footer */
+
+    /* Quote Styling */
+    blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: #e8c7a7;
+      margin-bottom: 2rem;
+      text-align: center;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    blockquote p {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    /* Content Text */
+    .container h2,
+    .container p {
+      color: #f5f1e9;
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .container h2 {
+      font-family: 'Playfair Display', serif;
+      margin-bottom: 1rem;
+    }
+
+    /* Blog Post Link */
+    .blog-post {
+      font-size: 1.2rem;
+      font-weight: bold;
+      text-align: center;
+      margin-top: 2rem;
+    }
+
+    .blog-post a {
+      text-decoration: none;
+      color: #f5f1e9;
+      font-family: 'Montserrat', sans-serif;
+      font-size: 1.4rem;
+    }
+
+    .blog-post a:hover {
+      color: #e8c7a7;
+    }
+
+    /* Footer */
     footer {
       position: fixed;
       bottom: 0;
-      left: 0;
       width: 100%;
-      background-color: #4e342e;
+      background-color: rgba(60, 40, 35, 0.85); /* Darker brown from last code */
       color: #fff;
-      text-align: center;
+      z-index: 1002;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
       padding: 0.5rem 0;
+    }
+
+    .footer-content {
+      grid-column: 2;
+      text-align: center;
       font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      z-index: 1000;
+      font-weight: bold;
     }
-    
+
+    .footer-image {
+      grid-column: 3;
+      justify-self: end;
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
+    }
+
     footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-    }
-    
-    /* Main Content Wrapper */
-    .content-wrapper {
-      margin: 80px auto 120px auto; /* Space for fixed header/footer with extra buffer */
-      max-width: 1000px;
-      padding: 0 1rem;
-    }
-    
-    /* Blockquote (Quote) */
-    blockquote {
-      font-family: 'Lora', serif;
-      color: #cc9966;
-      font-style: italic;
-      margin: 1rem auto;
-      max-width: 800px;
-      text-align: center;
-      font-weight: 400;
-    }
-    
-    blockquote p {
-      text-align: right;
-      font-weight: 700;
-      margin-top: 0.5rem;
-    }
-    
-    /* Main Heading */
-    h1 {
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      margin: 1.5rem 0 1rem 0;
-      font-weight: 700;
-    }
-    
-    /* Intro Paragraph */
-    .intro-text {
-      font-family: 'Roboto', sans-serif;
-      max-width: 800px;
-      margin: 0.5rem auto 2rem auto;
-      text-align: center;
-      font-weight: 400;
-    }
-    
-    /* Latest Blog Section */
-    .latest-blog {
-      text-align: center;
-      margin: 2rem auto;
-    }
-    
-    .latest-blog a {
-      font-family: 'Roboto', sans-serif;
-      font-size: 1.1rem;
-      font-weight: 700;
-      color: #4e342e;
+      color: inherit;
       text-decoration: none;
     }
-    
-    .latest-blog a:hover {
-      text-decoration: underline;
-    }
-    
-    .post-date {
-      font-family: 'Roboto', sans-serif;
-      color: #555;
-      margin-top: 0.25rem;
-      font-size: 0.9rem;
+
+    /* Buffer space at bottom */
+    .spacer {
+      height: 120px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="gear.html">Gear &amp; Skills</a></li>
-        <li><a href="services.html">Types of Video Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
-  
-  <div class="content-wrapper">
-    <blockquote>
-      "I don't know why people expect art to make sense. 
-      They accept the fact that life doesn't make sense."
-      <p>David Lynch</p>
-    </blockquote>
-    
-    <h1>The Blog</h1>
-    <p class="intro-text">
-      Welcome to my blog. Check out the latest post below.
-    </p>
-    
-    <div class="latest-blog">
-      <a href="blog-post-1.html">Capturing Life... - March 15, 2025</a>
-    </div>
+
+<header>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="header-image">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gear.html">Gear & Skills</a></li>
+      <li><a href="services.html">Types of Video Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
+
+<div class="container">
+  <blockquote>
+    "I don't know why people expect art to make sense. They accept the fact that life doesn't make sense."
+    <p>— David Lynch</p>
+  </blockquote>
+
+  <h2>The Blog</h2>
+  <p>Welcome to my blogging space. Below, you’ll find a link to my latest post. Dive in and explore insights on filmmaking, creativity, and more.</p>
+
+  <div class="blog-post">
+    <a href="blog-post-1.html">#1 - The Art of Capturing Life: A Videographer’s Manifesto (March 15, 2025)</a>
   </div>
-  
-  <footer>
+</div>
+
+<div class="spacer"></div>
+
+<footer>
+  <div class="footer-content">
     <p>j_c@dawninfinite.com | (815)681-8696</p>
-    <p>
-      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">
-        Visit Us On Facebook
-      </a>
-    </p>
-  </footer>
+    <p><a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a></p>
+  </div>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image">
+</footer>
+
 </body>
 </html>
