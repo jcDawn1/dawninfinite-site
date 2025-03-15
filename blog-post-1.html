@@ -2,33 +2,36 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Post 1 - The Art of Capturing Life: A Videographer’s Manifesto</title>
-  <!-- Google Fonts: Multiple families for varied typography -->
+  <title>1. The Art of Capturing Life: A Videographer’s Manifesto</title>
+  <!-- Google Fonts -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link 
     href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" 
-    rel="stylesheet">
+    rel="stylesheet"
+  >
   <style>
     /* Reset */
     html, body {
       margin: 0;
       padding: 0;
-      background-color: #f5f1e9;
+      background-color: #f5f1e9; /* Soft beige */
       color: #000;
       font-size: 16px;
       line-height: 1.6;
     }
+
     /* Fixed Header */
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #4e342e;
+      background-color: #4e342e; /* Dark brown */
       text-align: center;
       padding: 0.5rem 0;
       z-index: 1000;
     }
+
     nav ul {
       display: flex;
       justify-content: center;
@@ -36,9 +39,11 @@
       margin: 0;
       padding: 0;
     }
+
     nav ul li {
       margin: 0 1rem;
     }
+
     nav ul li a {
       text-decoration: none;
       color: #fff;
@@ -46,7 +51,65 @@
       font-weight: 700;
       font-size: 0.9rem;
     }
-    /* Fixed Footer */
+
+    /* Page Wrapper */
+    .content-wrapper {
+      margin: 80px auto 140px auto;
+      max-width: 800px;
+      padding: 0 1rem;
+    }
+
+    /* Blockquote (Quote) */
+    blockquote {
+      font-family: 'Lora', serif;
+      color: #cc9966;
+      font-style: italic;
+      margin: 1rem auto;
+      max-width: 800px;
+      text-align: center;
+      font-weight: 400;
+    }
+
+    blockquote p {
+      text-align: right;
+      font-weight: 700;
+      margin-top: 0.5rem;
+    }
+
+    /* Page Heading */
+    h1 {
+      font-family: 'Playfair Display', serif;
+      text-align: center;
+      margin: 1.5rem 0 1rem 0;
+      font-weight: 700;
+    }
+
+    /* Blog Content */
+    .blog-content {
+      font-family: 'Roboto', sans-serif;
+      max-width: 800px;
+      margin: 0 auto;
+      text-align: justify;
+    }
+
+    /* Comments Section */
+    #comments {
+      max-width: 800px;
+      margin: 2rem auto;
+      padding: 1rem;
+      background: #f5f1e9;
+      border-radius: 8px;
+      text-align: center;
+    }
+
+    #comments h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 1.8rem;
+      color: #4e342e; /* Dark brown */
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
     footer {
       position: fixed;
       bottom: 0;
@@ -60,65 +123,16 @@
       font-weight: 700;
       z-index: 1000;
     }
+
     footer a {
       color: #fff;
       text-decoration: none;
       font-weight: 700;
     }
-    /* Content Wrapper */
-    .content-wrapper {
-      margin: 80px auto 120px auto;
-      max-width: 1000px;
-      padding: 0 1rem;
-    }
-    /* Blockquote (Quote) */
-    blockquote {
-      font-family: 'Lora', serif;
-      color: #cc9966;
-      font-style: italic;
-      margin: 1rem auto;
-      max-width: 800px;
-      text-align: center;
-      font-weight: 400;
-    }
-    blockquote p {
-      text-align: right;
-      font-weight: 700;
-      margin-top: 0.5rem;
-    }
-    /* Main Heading */
-    h1 {
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      margin: 1.5rem 0 0.25rem 0;
-      font-weight: 700;
-    }
-    /* Post Date */
-    .post-date {
-      font-family: 'Roboto', sans-serif;
-      text-align: center;
-      margin-bottom: 1.5rem;
-      font-weight: 400;
-      color: #555;
-    }
-    /* Paragraphs and Lists */
-    p, li {
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      margin-bottom: 1rem;
-    }
-    h2, h3 {
-      font-family: 'Playfair Display', serif;
-      margin: 2rem 0 1rem 0;
-      font-weight: 700;
-    }
-    ul {
-      margin-left: 1.5rem;
-      list-style-type: disc;
-    }
   </style>
 </head>
 <body>
+
   <header>
     <nav>
       <ul>
@@ -134,72 +148,69 @@
 
   <div class="content-wrapper">
     <blockquote>
-      "It's only after we've lost everything that we're free to do anything."
-      <p>Chuck Palahniuk, <em>Fight Club</em></p>
+      "We all die. The goal isn't to live forever, the goal is to create something that will."
+      <p>— Chuck Palahniuk</p>
     </blockquote>
 
     <h1>1. The Art of Capturing Life: A Videographer’s Manifesto</h1>
-    <p class="post-date">March 15, 2025</p>
 
-    <p>
-      There’s something downright magical about hitting the record button at just the right moment. Not when everything’s picture-perfect, but when everything’s beautifully and perfectly human.
-    </p>
+    <div class="blog-content">
+      <p>There’s something downright magical about hitting the record button at just the right moment. Not when everything’s picture-perfect, but when everything’s beautifully and perfectly human.</p>
 
-    <p>
-      I’m JC, and my mission is to capture raw emotions through my lens. While many might start with their gear specs or technical know-how, I’m here to share a different kind of story. A story told in teary-eyed wedding vows, hearty laughs at receptions, and those fleeting glances between people in love.
-    </p>
+      <p>I’m JC, and my mission is to capture raw emotions through my lens. While many might start with their gear specs or technical know-how, I’m here to share a different kind of story. A story told in teary-eyed wedding vows, hearty laughs at receptions, and those fleeting glances between people in love.</p>
 
-    <h2>Why Traditional Videography Doesn’t Quite Catch It</h2>
-    <p>
-      Most videographers will emphasize perfect lighting, smooth shots, and seamless transitions. They aren’t wrong, but they’re skipping over something truly essential. In today’s world, where AI can create flawless scenes and algorithms can edit videos with precision, the real treasure is in capturing what tech can’t:
-    </p>
-    <ul>
-      <li>The slight wobble in a dad’s voice during his toast</li>
-      <li>The impromptu dance-off between grandma and the ring bearer</li>
-      <li>Those quiet, unnoticed moments when no one thinks they’re on camera</li>
-    </ul>
+      <h2>Why Traditional Videography Doesn’t Quite Catch It</h2>
+      <p>Most videographers emphasize perfect lighting, smooth shots, and seamless transitions. They aren’t wrong, but they’re skipping over something truly essential. In today’s world, where AI can create flawless scenes and algorithms can edit videos with precision, the real treasure is in capturing what tech can’t:</p>
 
-    <h2>From Artist to Visual Storyteller</h2>
-    <p>
-      My journey didn’t begin with a camera. It started with messy sketches, late-night jam sessions (apologies to my old neighbors), and an insatiable craving to create. This eclectic background taught me a vital lesson: it’s not technical perfection that moves people. It’s authenticity.
-    </p>
+      <ul>
+        <li>The slight wobble in a dad’s voice during his toast</li>
+        <li>The impromptu dance-off between grandma and the ring bearer</li>
+        <li>Those quiet, unnoticed moments when no one thinks they’re on camera</li>
+      </ul>
 
-    <h2>The Unscripted Philosophy</h2>
-    <p>
-      Here’s what makes my approach unique:
-    </p>
-    <ol>
-      <li>I’m on the hunt for genuine emotions, not staged perfection.</li>
-      <li>I believe in letting moments unfold naturally, rather than forcing them.</li>
-      <li>I capture stories as they happen, unscripted and spontaneous.</li>
-    </ol>
+      <h2>From Artist to Visual Storyteller</h2>
+      <p>My journey didn’t begin with a camera. It started with messy sketches, late-night jam sessions (apologies to my old neighbors), and an insatiable craving to create. This eclectic background taught me a vital lesson: it’s not technical perfection that moves people. It’s authenticity.</p>
 
-    <h2>Beyond the Lens</h2>
-    <p>
-      This is about more than just videography. It’s about preserving the moments that truly matter. While technology keeps advancing, it will never replace the human instinct to anticipate emotional moments, to feel the vibe in a room, or to sense when someone’s about to bust out their signature dance move.
-    </p>
+      <h2>The Unscripted Philosophy</h2>
+      <p>Here’s what makes my approach unique:</p>
+      <ol>
+        <li>I’m on the hunt for genuine emotions, not staged perfection.</li>
+        <li>I believe in letting moments unfold naturally, rather than forcing them.</li>
+        <li>I capture stories as they happen, unscripted and spontaneous.</li>
+      </ol>
 
-    <h2>Join the Journey</h2>
-    <p>
-      If you’re a believer in the power of authentic storytelling, if you value genuine moments over polished poses, and if you think the best stories are the unexpected ones – you’ve found your place.
-    </p>
+      <h2>Join the Journey</h2>
+      <p>If you’re a believer in the power of authentic storytelling, if you value genuine moments over polished poses, and if you think the best stories are the unexpected ones – you’ve found your place.</p>
 
-    <p>
-      Let’s celebrate the beautiful chaos of real life together. No filters necessary.
-    </p>
+      <p>Let’s celebrate the beautiful chaos of real life together. No filters necessary.</p>
+    </div>
 
-    <p>
-      Ready to dive into the world of unscripted magic? Grab your camera and let’s create some unforgettable stories!
-    </p>
+    <!-- Giscus Comments Section -->
+    <div id="comments">
+      <h2>Join the Discussion</h2>
+      <script src="https://giscus.app/client.js"
+          data-repo="jcDawn1/dawninfinite-site"
+          data-repo-id="R_kgDOOFyuPQ"
+          data-category="General"
+          data-category-id="DIC_kwDOOFyuPc4CoE7D"
+          data-mapping="title"
+          data-strict="1"
+          data-reactions-enabled="1"
+          data-emit-metadata="0"
+          data-input-position="top"
+          data-theme="preferred_color_scheme"
+          data-lang="en"
+          data-loading="lazy"
+          crossorigin="anonymous"
+          async>
+      </script>
+    </div>
   </div>
 
   <footer>
     <p>j_c@dawninfinite.com | (815)681-8696</p>
-    <p>
-      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">
-        Visit Us On Facebook
-      </a>
-    </p>
+    <p><a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a></p>
   </footer>
+
 </body>
 </html>
