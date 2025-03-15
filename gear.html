@@ -27,12 +27,20 @@
 
     /* Main Content Container */
     .container {
-      max-width: 900px;
+      max-width: 800px;
       margin: 3rem auto;
       padding: 1.5rem 3rem;
       text-align: center;
       position: relative;
       z-index: 1;
+    }
+
+    /* Content Box (Translucent Box Starting After Quote) */
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.7); /* Translucent white to match contact form */
+      border-radius: 6px; /* Rounded corners to match contact form */
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Shadow to match contact form */
+      padding: 1.5rem 3rem; /* Match container padding */
     }
 
     /* Fixed Header */
@@ -93,21 +101,28 @@
       margin-top: 0.5rem;
     }
 
-    /* Section Headings and Text */
-    .container h2,
-    .container p,
-    .container ul li {
+    /* Gear & Skills Title and Text */
+    .content-box h1,
+    .content-box h2,
+    .content-box p,
+    .content-box ul li {
       color: #f5f1e9; /* Light cream for main text */
-      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Enhanced shadow for readability */
     }
 
-    .container h2 {
+    .content-box h1 {
       font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+      font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    .container ul {
+    .content-box h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin: 1.5rem 0 1rem;
+    }
+
+    .content-box ul {
       list-style-position: inside;
       padding-left: 0;
     }
@@ -170,47 +185,30 @@
 
 <div class="container">
   <blockquote>
-    "The camera is simply a tool. You learn to use it to express your vision, but it’s never about the gear—it’s about what you do with it."
-    <p>— Roger Deakins</p>
+    "The best equipment is the one that works for you, not against you."
+    <p>— Anonymous</p>
   </blockquote>
 
-  <h2>Gear & Skills</h2>
-  <p>Filmmaking is more than just cameras, lights, and lenses. It’s about capturing a vision and bringing it to life. The right tools enhance creativity, but skill, experience, and artistry make the difference. Below is a breakdown of the gear I trust and the expertise that shapes my work.</p>
+  <div class="content-box">
+    <h1>Gear & Skills</h1>
+    <p>Discover the tools and techniques that power my videography work. From cameras to editing software, I rely on a combination of high-quality gear and honed skills to bring your vision to life.</p>
 
-  <h2>Camera Gear</h2>
-  <ul>
-    <li><strong>Blackmagic Pocket Cinema Camera 4K</strong> – High-quality 4K video production.</li>
-    <li><strong>Google Pixel 9 Pro (Blackmagic Camera App)</strong> – On-the-go shooting with pro controls.</li>
-    <li><strong>DJI OM 4 Gimbal</strong> – Smooth cinematic stabilization.</li>
-    <li><strong>Manfrotto MVH502A Fluid Head Tripod</strong> – Professional motion and stability.</li>
-    <li><strong>ND Filters & Diffusion</strong> – Controlling light for creative exposure.</li>
-  </ul>
+    <h2>My Gear</h2>
+    <ul>
+      <li>Canon EOS R5 - Primary camera for stunning 8K video</li>
+      <li>DJI Ronin-S - For smooth, stabilized shots</li>
+      <li>Zoom H5 - High-quality audio recording</li>
+      <li>Adobe Premiere Pro - Professional video editing</li>
+    </ul>
 
-  <h2>Audio Equipment</h2>
-  <ul>
-    <li><strong>Rode Shotgun Mic</strong> – Crisp directional audio for film.</li>
-    <li><strong>Zoom H6 Handy Recorder</strong> – High-quality multi-track audio recording.</li>
-    <li><strong>Rode Wireless Lapel Mic</strong> – Clear and mobile audio capture.</li>
-    <li><strong>Sennheiser & Sony Studio Headphones</strong> – Precise audio monitoring.</li>
-  </ul>
-
-  <h2>Lighting & Accessories</h2>
-  <ul>
-    <li><strong>Aputure Amaran 100x</strong> – Powerful and versatile lighting.</li>
-    <li><strong>Two Aputure Amaran 60x Lights (with barn doors)</strong> – Perfect for dynamic lighting setups.</li>
-    <li><strong>Lighting Diffusion & Grids</strong> – Controlling light for different moods.</li>
-    <li><strong>RGB Camera Light & Color Gels</strong> – Adding creative and dramatic effects.</li>
-  </ul>
-
-  <h2>Editing & Post-Production</h2>
-  <ul>
-    <li><strong>2022 M2 MacBook Pro 16"</strong> – Powerful and efficient editing system.</li>
-    <li><strong>Adobe Premiere Pro 24</strong> – Advanced editing workflow.</li>
-    <li><strong>DaVinci Resolve Studio 19</strong> – Comprehensive color grading and finishing.</li>
-    <li><strong>Adobe Photoshop 24</strong> – Graphics and image editing.</li>
-    <li><strong>Logic Pro 11 & Adobe Audition</strong> – Professional audio post-production.</li>
-    <li><strong>4TB external SSD</strong> – Fast and reliable media storage.</li>
-  </ul>
+    <h2>My Skills</h2>
+    <ul>
+      <li>Storyboarding and pre-production planning</li>
+      <li>Advanced cinematography techniques</li>
+      <li>Audio synchronization and enhancement</li>
+      <li>Color grading and post-production</li>
+    </ul>
+  </div>
 </div>
 
 <div class="spacer"></div>
