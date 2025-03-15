@@ -14,31 +14,20 @@
     html, body {
       margin: 0;
       padding: 0;
-      height: 100%;
+      width: 100%;
+      min-height: 100%;
       font-size: 16px;
       line-height: 1.6;
-      color: #f5f1e9; /* Match site theme */
+      color: #f5f1e9; /* Light text color */
       font-family: 'Roboto', sans-serif;
-      overflow-x: hidden;
     }
 
-    /* Parallax Background */
-    .parallax {
-      position: relative;
-      width: 100%;
-      height: 100vh;
-      background: url('hero-image.jpeg') no-repeat center center fixed;
-      background-size: cover;
-      background-attachment: fixed;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      text-align: center;
-      color: white;
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
-      font-weight: bold;
-      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+    /* Display Full Image Without Cropping */
+    body {
+      background: url('hero-image.jpeg') no-repeat center center;
+      background-size: contain; /* Ensures the entire image is visible */
+      background-color: #000;   /* Fills any leftover space (letterbox) with black (or pick a color) */
+      background-attachment: fixed; /* Optional: keeps the image in place */
     }
 
     /* Fixed Header */
@@ -47,10 +36,10 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: rgba(78, 52, 46, 0.9); /* Dark brown with slight transparency */
+      background-color: rgba(78, 52, 46, 0.8); /* Semi-transparent dark brown */
       text-align: center;
       padding: 0.5rem 0;
-      z-index: 1002;
+      z-index: 1000;
     }
 
     nav ul {
@@ -73,17 +62,26 @@
       font-size: 0.9rem;
     }
 
-    /* Content Section */
+    /* Hero Text Over the Image */
+    .hero {
+      margin-top: 60px; /* Space for header */
+      text-align: center;
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      font-weight: bold;
+      text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.8);
+      color: #fff;
+      padding: 5rem 1rem 2rem 1rem; 
+    }
+
+    /* Content Wrapper with Partial Transparency */
     .content-wrapper {
-      position: relative;
-      z-index: 1002;
       max-width: 800px;
-      margin: 3rem auto;
+      margin: 2rem auto 4rem auto;
+      background: rgba(78, 52, 46, 0.5); /* Semi-transparent dark brown */
       padding: 2rem;
-      background: rgba(78, 52, 46, 0.85); /* Dark brown with opacity */
       border-radius: 10px;
-      text-align: justify;
-      color: #f5f1e9; /* Soft beige text */
+      color: #f5f1e9;
     }
 
     /* Blockquote (Quote) */
@@ -105,7 +103,11 @@
 
     /* Footer */
     footer {
-      background-color: rgba(78, 52, 46, 0.9);
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: rgba(78, 52, 46, 0.8);
       color: #fff;
       text-align: center;
       padding: 0.5rem 0;
@@ -118,7 +120,6 @@
       text-decoration: none;
       font-weight: 700;
     }
-
   </style>
 </head>
 <body>
@@ -136,7 +137,7 @@
     </nav>
   </header>
 
-  <div class="parallax">
+  <div class="hero">
     Cinematic Visions: Real Life Stories
   </div>
 
@@ -147,11 +148,17 @@
     </blockquote>
 
     <h2>Welcome to Dawn Infinite Imagery</h2>
-    <p>I'm JC, the heart and soul behind the camera. My journey into videography wasn't traditional—after years of exploring various paths and never quite feeling settled, I found what I'd been searching for in videography. At 39, I discovered I'd been living with undiagnosed ADHD, which explained my lifelong search for creativity, excitement, and freedom. Then, I picked up a camera—and suddenly, everything clicked.</p>
+    <p>
+      I'm JC, the heart and soul behind the camera. My journey into videography wasn't traditional—after years of exploring various paths and never quite feeling settled, I found what I'd been searching for in videography. At 39, I discovered I'd been living with undiagnosed ADHD, which explained my lifelong search for creativity, excitement, and freedom. Then, I picked up a camera—and suddenly, everything clicked.
+    </p>
 
-    <p>With videography, my mind is free to roam, explore, and create without limits. Whether capturing an emotional wedding ceremony, the energy of a live concert, or a spontaneous heartfelt moment, it's never the same experience twice—and that's exactly why I love it.</p>
+    <p>
+      With videography, my mind is free to roam, explore, and create without limits. Whether capturing an emotional wedding ceremony, the energy of a live concert, or a spontaneous heartfelt moment, it's never the same experience twice—and that's exactly why I love it.
+    </p>
 
-    <p>For me, it's not just about clients—by the time we finish a project, we've become friends. The greatest reward is seeing your vision come to life and witnessing the excitement in your eyes when you first view your story captured on film. Whether it's your wedding day, a live event, or any personal project, Dawn Infinite Imagery is here to ensure your unique story is told exactly how it deserves to be—authentically and beautifully.</p>
+    <p>
+      For me, it's not just about clients—by the time we finish a project, we've become friends. The greatest reward is seeing your vision come to life and witnessing the excitement in your eyes when you first view your story captured on film. Whether it's your wedding day, a live event, or any personal project, Dawn Infinite Imagery is here to ensure your unique story is told exactly how it deserves to be—authentically and beautifully.
+    </p>
 
     <p><strong>Together, let's bring your cinematic vision to reality.</strong></p>
   </div>
