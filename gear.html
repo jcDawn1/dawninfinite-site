@@ -2,22 +2,37 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Gear &amp; Skills</title>
-  <!-- Google Fonts: Multiple families for varied typography -->
+  <title>Gear & Skills - Dawn Infinite Imagery</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" 
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+
   <style>
-    /* Reset */
-    html, body {
+    /* Reset Styles */
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
       margin: 0;
       padding: 0;
-      background-color: #f5f1e9; /* Soft beige */
-      color: #000;
-      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      color: #f5f1e9; /* Light cream for main text */
+      background-color: #FFFDD0; /* Cream background */
+      height: 100%;
+      overflow-x: hidden;
       line-height: 1.6;
+    }
+
+    /* Main Content Container */
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     /* Fixed Header */
@@ -26,18 +41,29 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #4e342e; /* Dark brown */
-      text-align: center;
-      padding: 0.5rem 0;
-      z-index: 1000;
+      background-color: #3C2A1E; /* Unified dark brown */
+      padding: 0.5rem 1rem;
+      z-index: 1002;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-image {
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
+    }
+
+    nav {
+      flex: 1;
     }
 
     nav ul {
       display: flex;
       justify-content: center;
-      list-style-type: none;
-      margin: 0;
+      list-style: none;
       padding: 0;
+      margin: 0;
     }
 
     nav ul li {
@@ -46,310 +72,156 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #fff;
+      color: #fff; /* White for nav links */
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 0.9rem;
     }
 
-    /* Fixed Footer */
-    footer {
-      position: fixed;
-      bottom: 0;
-      left: 0;
-      width: 100%;
-      background-color: #4e342e;
-      color: #fff;
-      text-align: center;
-      padding: 0.5rem 0;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      z-index: 1000;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    /* Main Content Wrapper with extra bottom margin for buffer */
-    .content-wrapper {
-      margin: 80px auto 160px auto;
-      max-width: 1000px;
-      padding: 0 1rem;
-    }
-
-    /* Blockquote (Quote) */
+    /* Quote Styling */
     blockquote {
       font-family: 'Lora', serif;
-      color: #cc9966;
       font-style: italic;
-      margin: 1rem auto;
-      max-width: 800px;
+      color: #7B3F00; /* Darker orange-brown for quote */
+      margin-bottom: 2rem;
       text-align: center;
-      font-weight: 400;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
     }
 
     blockquote p {
       text-align: right;
-      font-weight: 700;
+      font-weight: bold;
       margin-top: 0.5rem;
     }
 
-    /* Page Heading */
-    h1 {
+    /* Section Headings and Text */
+    .container h2,
+    .container p,
+    .container ul li {
+      color: #f5f1e9; /* Light cream for main text */
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .container h2 {
       font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    .container ul {
+      list-style-position: inside;
+      padding-left: 0;
+    }
+
+    /* Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #3C2A1E; /* Matches header */
+      color: #fff; /* White for footer text */
+      z-index: 1002;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0.5rem 0;
+    }
+
+    .footer-content {
+      grid-column: 2;
       text-align: center;
-      margin: 1.5rem 0 1rem 0;
-      font-weight: 700;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
     }
 
-    /* Intro Paragraph */
-    .intro-text {
-      font-family: 'Roboto', sans-serif;
-      max-width: 800px;
-      margin: 0.5rem auto 2rem auto;
-      text-align: center;
-      font-weight: 400;
+    .footer-image {
+      grid-column: 3;
+      justify-self: end;
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
     }
 
-    /* Section Wrapper */
-    .section-wrapper {
-      max-width: 800px;
-      margin: 2rem auto;
+    footer a {
+      color: #fff; /* White for footer links */
+      text-decoration: none;
     }
 
-    .section-wrapper h2 {
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      margin: 1.5rem 0 1rem 0;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-    }
-
-    .gear-list {
-      list-style-type: disc;
-      margin-left: 1.5rem;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-    }
-
-    .gear-list li {
-      margin: 0.5rem 0;
-    }
-
-    .gear-item-title {
-      font-weight: 700;
+    /* Buffer space at bottom */
+    .spacer {
+      height: 120px;
     }
   </style>
 </head>
 <body>
 
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="gear.html">Gear &amp; Skills</a></li>
-        <li><a href="services.html">Types of Video Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
+<header>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="header-image">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gear.html">Gear & Skills</a></li>
+      <li><a href="services.html">Types of Video Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-  <div class="content-wrapper">
-    <blockquote>
-      "The camera is simply a tool. You learn to use it to express your vision, 
-      but it's never about the gear, it's about what you do with it."
-      <p>Roger Deakins</p>
-    </blockquote>
+<div class="container">
+  <blockquote>
+    "The camera is simply a tool. You learn to use it to express your vision, but it’s never about the gear—it’s about what you do with it."
+    <p>— Roger Deakins</p>
+  </blockquote>
 
-    <h1>Gear &amp; Skills</h1>
-    <p class="intro-text">
-      Filmmaking is more than just cameras, lights, and lenses. It’s about capturing a vision 
-      and bringing it to life. The right tools enhance creativity, but skill, experience, 
-      and artistry make the difference. Below is a breakdown of the gear I trust 
-      and the expertise that shapes my work.
-    </p>
+  <h2>Gear & Skills</h2>
+  <p>Filmmaking is more than just cameras, lights, and lenses. It’s about capturing a vision and bringing it to life. The right tools enhance creativity, but skill, experience, and artistry make the difference. Below is a breakdown of the gear I trust and the expertise that shapes my work.</p>
 
-    <!-- Skills Section -->
-    <div class="section-wrapper">
-      <h2>Skills</h2>
-      <ul class="gear-list">
-        <li>Videographer for weddings, live events, and concerts</li>
-        <li>Digital filmmaking student, LA Film School</li>
-        <li>Owner of Dawn Infinite Imagery</li>
-        <li>Proficient in video editing and color grading</li>
-      </ul>
-    </div>
+  <h2>Camera Gear</h2>
+  <ul>
+    <li><strong>Blackmagic Pocket Cinema Camera 4K</strong> – High-quality 4K video production.</li>
+    <li><strong>iPhone 16 Pro (Blackmagic iOS App)</strong> – On-the-go shooting with pro controls.</li>
+    <li><strong>DJI OM 4 Gimbal</strong> – Smooth cinematic stabilization.</li>
+    <li><strong>Manfrotto MVH502A Fluid Head Tripod</strong> – Professional motion and stability.</li>
+    <li><strong>ND Filters & Diffusion</strong> – Controlling light for creative exposure.</li>
+  </ul>
 
-    <!-- Camera Gear Section -->
-    <div class="section-wrapper">
-      <h2>Camera Gear</h2>
-      <ul class="gear-list">
-        <li>
-          <span class="gear-item-title">Blackmagic Pocket Cinema Camera 4K</span>,
-          high-quality 4K video production.
-        </li>
-        <li>
-          <span class="gear-item-title">iPhone 16 Pro (Blackmagic iOS App)</span>,
-          on-the-go shooting with pro controls.
-        </li>
-        <li>
-          <span class="gear-item-title">DJI OM 4 Gimbal</span>,
-          smooth cinematic stabilization.
-        </li>
-        <li>
-          <span class="gear-item-title">Manfrotto MVH502A Fluid Head &amp; 546B Tripod</span>,
-          professional motion and stability.
-        </li>
-        <li>
-          <span class="gear-item-title">ND Filters (Variable ND2–ND400) &amp; Diffusion</span>,
-          controlling light for creative exposure.
-        </li>
-        <li>
-          <span class="gear-item-title">SmallRig LP-E6NH batteries &amp; charger</span>,
-          reliable power for long shoots.
-        </li>
-        <li>
-          <span class="gear-item-title">Westcott NP-F970 batteries</span>,
-          additional power solutions.
-        </li>
-        <li>
-          <span class="gear-item-title">GVM V-Mount Battery BV-95 (x3)</span>,
-          extended runtime for professional setups.
-        </li>
-        <li>
-          <span class="gear-item-title">6 ft selfie stick</span>,
-          unique angles and creative perspectives.
-        </li>
-      </ul>
+  <h2>Audio Equipment</h2>
+  <ul>
+    <li><strong>Rode Shotgun Mic</strong> – Crisp directional audio for film.</li>
+    <li><strong>Zoom H6 Handy Recorder</strong> – High-quality multi-track audio recording.</li>
+    <li><strong>Rode Wireless Lapel Mic</strong> – Clear and mobile audio capture.</li>
+    <li><strong>Sennheiser & Sony Studio Headphones</strong> – Precise audio monitoring.</li>
+  </ul>
 
-      <!-- Lens Sub-section -->
-      <h3 style="font-family: 'Playfair Display', serif; text-align:center; margin-top: 2rem;">
-        Lenses
-      </h3>
-      <ul class="gear-list">
-        <li>
-          <span class="gear-item-title">Micro 4/3 Lenses</span>:
-          12mm, 25mm, 50mm, 45-150mm zoom.
-        </li>
-        <li>
-          <span class="gear-item-title">iPhone 16 Pro Lenses</span>:
-          13mm, 24mm, 28mm, 35mm.
-        </li>
-      </ul>
-    </div>
+  <h2>Lighting & Accessories</h2>
+  <ul>
+    <li><strong>Aputure Amaran 100x</strong> – Powerful and versatile lighting.</li>
+    <li><strong>Two Aputure Amaran 60x Lights (with barn doors)</strong> – Perfect for dynamic lighting setups.</li>
+    <li><strong>Lighting Diffusion & Grids</strong> – Controlling light for different moods.</li>
+    <li><strong>RGB Camera Light & Color Gels</strong> – Adding creative and dramatic effects.</li>
+  </ul>
 
-    <!-- Audio Equipment Section -->
-    <div class="section-wrapper">
-      <h2>Audio Equipment</h2>
-      <ul class="gear-list">
-        <li>
-          <span class="gear-item-title">Rode Shotgun Mic</span>,
-          crisp directional audio for film.
-        </li>
-        <li>
-          <span class="gear-item-title">Rode Lapel Mic (wireless)</span>,
-          discreet and mobile audio capture.
-        </li>
-        <li>
-          <span class="gear-item-title">Zoom H6 Handy Recorder</span>,
-          high-quality multi-track audio recording.
-        </li>
-        <li>
-          <span class="gear-item-title">Sony Studio Headphones</span>,
-          reliable monitoring.
-        </li>
-        <li>
-          <span class="gear-item-title">Sennheiser Studio Headphones</span>,
-          precise audio referencing.
-        </li>
-        <li>
-          <span class="gear-item-title">Extendable boom</span>,
-          versatile microphone placement.
-        </li>
-      </ul>
-    </div>
+  <h2>Editing & Post-Production</h2>
+  <ul>
+    <li><strong>2022 M2 MacBook Pro 16"</strong> – Powerful and efficient editing system.</li>
+    <li><strong>Adobe Premiere Pro 24</strong> – Advanced editing workflow.</li>
+    <li><strong>DaVinci Resolve Studio 19</strong> – Comprehensive color grading and finishing.</li>
+    <li><strong>Adobe Photoshop 24</strong> – Graphics and image editing.</li>
+    <li><strong>Logic Pro 11 & Adobe Audition</strong> – Professional audio post-production.</li>
+    <li><strong>4TB external SSD</strong> – Fast and reliable media storage.</li>
+  </ul>
+</div>
 
-    <!-- Lighting & Accessories Section -->
-    <div class="section-wrapper">
-      <h2>Lighting &amp; Accessories</h2>
-      <ul class="gear-list">
-        <li>
-          <span class="gear-item-title">Aputure Light Dome II Softbox</span>,
-          soft and diffused lighting.
-        </li>
-        <li>
-          <span class="gear-item-title">Aputure Amaran 100x</span>,
-          powerful and versatile lighting.
-        </li>
-        <li>
-          <span class="gear-item-title">Two Aputure Amaran 60x lights (with barn doors)</span>,
-          perfect for dynamic lighting setups.
-        </li>
-        <li>
-          <span class="gear-item-title">RGB camera light</span>,
-          colorful and dramatic effects.
-        </li>
-        <li>
-          <span class="gear-item-title">Color gels</span>,
-          additional creative lighting control.
-        </li>
-        <li>
-          <span class="gear-item-title">Lighting diffusion &amp; grids</span>,
-          shaping and controlling light.
-        </li>
-      </ul>
-    </div>
+<div class="spacer"></div>
 
-    <!-- Editing & Post-Production Section -->
-    <div class="section-wrapper">
-      <h2>Editing &amp; Post-Production</h2>
-      <ul class="gear-list">
-        <li>
-          <span class="gear-item-title">2022 M2 MacBook Pro 16"</span>,
-          powerful and efficient editing system.
-        </li>
-        <li>
-          <span class="gear-item-title">Adobe Premiere Pro 24</span>,
-          advanced editing workflow.
-        </li>
-        <li>
-          <span class="gear-item-title">DaVinci Resolve Studio 19</span>,
-          comprehensive color grading and finishing.
-        </li>
-        <li>
-          <span class="gear-item-title">Adobe Photoshop 24</span>,
-          graphics and image editing.
-        </li>
-        <li>
-          <span class="gear-item-title">Logic Pro 11 &amp; Adobe Audition</span>,
-          professional audio post-production.
-        </li>
-        <li>
-          <span class="gear-item-title">4TB external SSD</span>,
-          fast and reliable media storage.
-        </li>
-        <li>
-          <span class="gear-item-title">4TB SSD for backups</span>,
-          secure and efficient archiving.
-        </li>
-      </ul>
-    </div>
-  </div> <!-- End content-wrapper -->
-
-  <footer>
+<footer>
+  <div class="footer-content">
     <p>j_c@dawninfinite.com | (815)681-8696</p>
-    <p>
-      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">
-        Visit Us On Facebook
-      </a>
-    </p>
-  </footer>
+    <p><a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a></p>
+  </div>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image">
+</footer>
+
 </body>
 </html>
