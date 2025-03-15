@@ -2,258 +2,231 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Services</title>
-  <!-- Google Fonts: Multiple families for varied typography -->
+  <title>Services - Dawn Infinite Imagery</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
-    rel="stylesheet"
-  >
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+
   <style>
-    /* Reset */
-    html, body {
+    /* Reset Styles */
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
       margin: 0;
       padding: 0;
-      background-color: #f5f1e9;
-      color: #000;
-      font-size: 16px;
+      font-family: 'Roboto', sans-serif;
+      color: #f5f1e9; /* Light cream for main text */
+      background-color: #FFFDD0; /* Cream background */
+      height: 100%;
+      overflow-x: hidden;
       line-height: 1.6;
     }
-    
+
+    /* Main Content Container */
+    .container {
+      max-width: 900px;
+      margin: 3rem auto;
+      padding: 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
     /* Fixed Header */
     header {
       position: fixed;
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #4e342e;
-      text-align: center;
-      padding: 0.5rem 0;
-      z-index: 1000;
+      background-color: #3C2A1E; /* Unified dark brown */
+      padding: 0.5rem 1rem;
+      z-index: 1002;
+      display: flex;
+      align-items: center;
     }
-    
+
+    .header-image {
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
+    }
+
+    nav {
+      flex: 1;
+    }
+
     nav ul {
       display: flex;
       justify-content: center;
-      list-style-type: none;
-      margin: 0;
+      list-style: none;
       padding: 0;
+      margin: 0;
     }
-    
+
     nav ul li {
       margin: 0 1rem;
     }
-    
+
     nav ul li a {
       text-decoration: none;
-      color: #fff;
+      color: #fff; /* White for nav links */
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
-      font-size: 0.9rem;
     }
-    
-    /* Fixed Footer */
+
+    /* Quote Styling */
+    blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: #7B3F00; /* Darker orange-brown for quote */
+      margin-bottom: 2rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    blockquote p {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    /* Section Headings and Text */
+    .container h2,
+    .container p {
+      color: #f5f1e9; /* Light cream for main text */
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
+    }
+
+    .container h2 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Call to Action Button */
+    .cta-button {
+      display: block;
+      width: 250px;
+      margin: 2rem auto;
+      padding: 12px 20px;
+      text-align: center;
+      background-color: #A0522D; /* Sienna to match blog link */
+      color: #fff; /* White for better contrast */
+      font-size: 1.2rem;
+      font-weight: bold;
+      font-family: 'Montserrat', sans-serif;
+      border: none;
+      border-radius: 8px;
+      text-decoration: none;
+      transition: background-color 0.3s ease;
+    }
+
+    .cta-button:hover {
+      background-color: #7B3F00; /* Darker orange-brown on hover */
+    }
+
+    /* Footer */
     footer {
       position: fixed;
       bottom: 0;
-      left: 0;
       width: 100%;
-      background-color: #4e342e;
-      color: #fff;
-      text-align: center;
+      background-color: #3C2A1E; /* Matches header */
+      color: #fff; /* White for footer text */
+      z-index: 1002;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
       padding: 0.5rem 0;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      z-index: 1000;
     }
-    
+
+    .footer-content {
+      grid-column: 2;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+    }
+
+    .footer-image {
+      grid-column: 3;
+      justify-self: end;
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
+    }
+
     footer a {
-      color: #fff;
+      color: #fff; /* White for footer links */
       text-decoration: none;
-      font-weight: 700;
     }
-    
-    /* Main Content Wrapper */
-    .content-wrapper {
-      margin: 80px auto 140px auto;
-      max-width: 1000px;
-      padding: 0 1rem;
-    }
-    
-    /* Blockquote (Quote) */
-    blockquote {
-      font-family: 'Lora', serif;
-      color: #cc9966;
-      font-style: italic;
-      margin: 1rem auto;
-      max-width: 800px;
-      text-align: center;
-      font-weight: 400;
-    }
-    
-    blockquote p {
-      text-align: right;
-      font-weight: 700;
-      margin-top: 0.5rem;
-    }
-    
-    /* Page Heading */
-    h1 {
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      margin: 1.5rem 0 1rem 0;
-      font-weight: 700;
-    }
-    
-    /* Intro Paragraph */
-    .intro-text {
-      font-family: 'Roboto', sans-serif;
-      max-width: 800px;
-      margin: 0.5rem auto 2rem auto;
-      text-align: center;
-      font-weight: 400;
-    }
-    
-    /* Section Wrapper */
-    .section-wrapper {
-      max-width: 800px;
-      margin: 2rem auto;
-    }
-    
-    .section-wrapper h2 {
-      font-family: 'Playfair Display', serif;
-      text-align: center;
-      margin: 1.5rem 0 1rem 0;
-      font-size: 1.5rem;
-      text-transform: uppercase;
-      letter-spacing: 1px;
-      font-weight: 700;
-    }
-    
-    .service-list {
-      list-style-type: none;
-      margin-left: 0;
-      padding-left: 0;
-      font-family: 'Roboto', sans-serif;
-      font-weight: 400;
-      margin-bottom: 1.5rem;
-    }
-    
-    .service-list li {
-      margin-bottom: 1.5rem;
-    }
-    
-    .service-title {
-      font-weight: 700;
-      font-size: 1.1rem;
-      margin-bottom: 0.3rem;
-      font-family: 'Roboto', sans-serif;
-    }
-    
-    /* Booking Button */
-    .booking-button-container {
-      text-align: center;
-      margin-top: 2rem;
-      margin-bottom: 2rem; /* Extra buffer space */
-    }
-    
-    .booking-button {
-      display: inline-block;
-      background-color: #4e342e;
-      color: #fff;
-      padding: 0.75rem 1.5rem;
-      text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      border-radius: 4px;
-      font-size: 1rem;
+
+    /* Buffer space at bottom */
+    .spacer {
+      height: 120px;
     }
   </style>
 </head>
 <body>
-  <header>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="portfolio.html">Portfolio</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="gear.html">Gear &amp; Skills</a></li>
-        <li><a href="services.html">Types of Video Work</a></li>
-        <li><a href="contact.html">Contact</a></li>
-      </ul>
-    </nav>
-  </header>
 
-  <div class="content-wrapper">
-    <blockquote>
-      "Drama is life with the dull bits cut out."
-      <p>Alfred Hitchcock</p>
-    </blockquote>
+<header>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="header-image">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gear.html">Gear & Skills</a></li>
+      <li><a href="services.html">Types of Video Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <h1>Services</h1>
-    <p class="intro-text">
-      I believe every project deserves skill, vision, and a personal touch. Below, you’ll find the core services I offer, each handled with creativity, empathy, and unwavering professionalism.
-    </p>
+<div class="container">
+  <blockquote>
+    "To make a great film you need three things – the script, the script, and the script."
+    <p>— Alfred Hitchcock</p>
+  </blockquote>
 
-    <div class="section-wrapper">
-      <h2>My Services</h2>
-      <ul class="service-list">
-        <li>
-          <p class="service-title">Wedding Videography</p>
-          <p>
-            I capture each laugh, tear, and embrace so you can revisit the happiest day of your life long after the final dance. My cinematic approach crafts an elegant, heartfelt keepsake you’ll treasure for years to come.
-          </p>
-        </li>
+  <h2>Services</h2>
+  <p>At Dawn Infinite Imagery, I don't just capture moments—I craft cinematic stories that bring your vision to life. Every project is a unique blend of artistry and authenticity, ensuring that no two videos feel the same. Explore the range of services offered:</p>
 
-        <li>
-          <p class="service-title">Live Event Coverage</p>
-          <p>
-            From corporate gatherings to private celebrations, I document events with precision while maintaining a discreet presence. Your guests and partners will appreciate the polished highlight that tells your story long after the event closes.
-          </p>
-        </li>
+  <h2>Wedding Films</h2>
+  <p>Your love story deserves more than just documentation—it deserves a film. I capture the raw emotions, the unexpected smiles, and the once-in-a-lifetime moments that make your wedding day unforgettable.</p>
 
-        <li>
-          <p class="service-title">Concert Videography</p>
-          <p>
-            Music is all about energy, passion, and connection. With multi-angle coverage and dynamic editing, I bring each performance to life on screen, letting fans relive the excitement and newcomers feel like they're front row.
-          </p>
-        </li>
+  <h2>Live Events & Concerts</h2>
+  <p>The energy of a live performance is electric, and my goal is to preserve that feeling forever. Whether it's a concert, a corporate event, or a special occasion, I create dynamic films that let audiences relive the experience.</p>
 
-        <li>
-          <p class="service-title">Professional Video Editing &amp; Color Grading</p>
-          <p>
-            Let me elevate your raw footage through a seamless post-production process. I fuse creative storytelling with meticulous color work to keep viewers engaged and ensure your project looks its absolute best.
-          </p>
-        </li>
+  <h2>Creative & Narrative Films</h2>
+  <p>From passion projects to indie films, I collaborate with creators to bring scripted visions to life. My work focuses on storytelling, cinematography, and capturing the emotion behind every frame.</p>
 
-        <li>
-          <p class="service-title">Highlight Reels &amp; Promotional Videos</p>
-          <p>
-            If you need a concise way to showcase your brand, project, or special occasion, I craft short-form videos that leave a memorable impact. Ideal for social media, marketing campaigns, or personal portfolios.
-          </p>
-        </li>
+  <h2>Promotional & Branding Videos</h2>
+  <p>Brand storytelling is everything. Whether you're a small business, a musician, or an artist, I create engaging visuals that showcase your brand with authenticity and impact.</p>
 
-        <li>
-          <p class="service-title">Confidential &amp; Discreet Adult Content Filming</p>
-          <p>
-            Privacy and respect guide this specialized service. I provide a secure atmosphere with absolute confidentiality, focusing on helping you realize your vision without compromising comfort or integrity.
-          </p>
-        </li>
-      </ul>
-    </div>
+  <h2>Confidential & Discreet Adult Content</h2>
+  <p>For those needing professional and discreet production, I provide a judgment-free space where artistry meets privacy. Every project is handled with respect and confidentiality.</p>
 
-    <div class="booking-button-container">
-      <a href="contact.html" class="booking-button">Book Your Session Now</a>
-    </div>
-  </div>
+  <h2>Music Videos</h2>
+  <p>Music is more than sound—it's an experience. I collaborate with artists to create visually stunning videos that amplify their music’s impact.</p>
 
-  <footer>
+  <h2>Documentary & Real Stories</h2>
+  <p>Real stories deserve to be told. Whether it’s a personal journey, a brand story, or a social cause, I produce documentary-style films that highlight powerful narratives.</p>
+
+  <h2>Ready to Bring Your Vision to Life?</h2>
+  <a href="contact.html" class="cta-button">Book a Consultation</a>
+</div>
+
+<div class="spacer"></div>
+
+<footer>
+  <div class="footer-content">
     <p>j_c@dawninfinite.com | (815)681-8696</p>
-    <p>
-      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">
-        Visit Us On Facebook
-      </a>
-    </p>
-  </footer>
+    <p><a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a></p>
+  </div>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image">
+</footer>
+
 </body>
 </html>
