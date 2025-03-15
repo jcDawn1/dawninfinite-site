@@ -10,19 +10,20 @@
     rel="stylesheet"
   >
   <style>
-    /* Basic Reset */
-    * {
+    /* Basic Reset & Layout to ensure scrolling and footer at bottom */
+    html, body {
+      height: 100%;
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
     }
 
-    /* Body Styling */
     body {
+      display: flex;
+      flex-direction: column;
       background-color: #f5f1e9; /* Soft beige */
       color: #000;
-      margin: 0;
       line-height: 1.6;
+      font-size: 16px;
     }
 
     /* Header & Nav */
@@ -36,6 +37,8 @@
       display: flex;
       justify-content: center;
       list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li {
@@ -44,16 +47,17 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #fff; /* Same as footer text */
+      color: #fff; /* Same text color as footer */
       font-family: 'Montserrat', sans-serif; /* Nav font */
       font-weight: 700;
       font-size: 0.9rem;
     }
 
-    /* Content Wrapper */
+    /* Main Content Wrapper */
     .content-wrapper {
+      flex: 1; /* Pushes footer down */
       max-width: 1000px;
-      margin: 2rem auto 4rem auto;
+      margin: 2rem auto;
       padding: 0 1rem;
     }
 
@@ -82,7 +86,7 @@
       font-weight: 700;
     }
 
-    /* Intro Paragraphs */
+    /* Intro Paragraph */
     .intro-text {
       font-family: 'Roboto', sans-serif; /* Body paragraphs */
       max-width: 800px;
@@ -122,18 +126,15 @@
       font-weight: 700;
     }
 
-    /* Footer */
+    /* Footer (non-fixed) */
     footer {
       background-color: #4e342e;
       color: #fff;
       text-align: center;
-      padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-      left: 0;
       font-family: 'Montserrat', sans-serif; /* Matches nav */
       font-weight: 700;
+      padding: 1rem 0;
+      margin-top: auto; /* Ensures footer stays at bottom */
     }
 
     footer a {
@@ -275,7 +276,7 @@
 
     <!-- Lighting & Accessories Section -->
     <div class="section-wrapper">
-      <h2>Lighting & Accessories</h2>
+      <h2>Lighting &amp; Accessories</h2>
       <ul class="gear-list">
         <li>
           <span class="gear-item-title">Aputure Light Dome II Softbox</span>,
@@ -306,7 +307,7 @@
 
     <!-- Editing & Post-Production Section -->
     <div class="section-wrapper">
-      <h2>Editing & Post-Production</h2>
+      <h2>Editing &amp; Post-Production</h2>
       <ul class="gear-list">
         <li>
           <span class="gear-item-title">2022 M2 MacBook Pro 16"</span>,
