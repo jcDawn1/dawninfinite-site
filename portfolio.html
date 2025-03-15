@@ -1,32 +1,188 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio - Dawn Infinite</title>
-    <link rel="stylesheet" href="styles.css">
+  <meta charset="UTF-8">
+  <title>Portfolio - Dawn Infinite Imagery</title>
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+
+  <style>
+    /* Reset Styles */
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
+      margin: 0;
+      padding: 0;
+      font-family: 'Roboto', sans-serif;
+      color: #f5f1e9; /* Light cream for main text */
+      background-color: #FFFDD0; /* Cream background */
+      height: 100%;
+      overflow-x: hidden;
+      line-height: 1.6;
+    }
+
+    /* Main Content Container */
+    .container {
+      max-width: 800px;
+      margin: 3rem auto;
+      padding: 1.5rem 3rem;
+      text-align: center;
+      position: relative;
+      z-index: 1;
+    }
+
+    /* Fixed Header */
+    header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #3C2A1E; /* Unified dark brown */
+      padding: 0.5rem 1rem;
+      z-index: 1002;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-image {
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
+    }
+
+    nav {
+      flex: 1;
+    }
+
+    nav ul {
+      display: flex;
+      justify-content: center;
+      list-style: none;
+      padding: 0;
+      margin: 0;
+    }
+
+    nav ul li {
+      margin: 0 1rem;
+    }
+
+    nav ul li a {
+      text-decoration: none;
+      color: #fff; /* White for nav links */
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+    }
+
+    /* Quote Styling */
+    blockquote {
+      font-family: 'Lora', serif;
+      font-style: italic;
+      color: #7B3F00; /* Darker orange-brown for quote */
+      margin-bottom: 2rem;
+      text-align: center;
+      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+    }
+
+    blockquote p {
+      text-align: right;
+      font-weight: bold;
+      margin-top: 0.5rem;
+    }
+
+    /* Section Headings and Text */
+    .container h1,
+    .container p {
+      color: #f5f1e9; /* Light cream for main text */
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Enhanced shadow for readability */
+    }
+
+    .container h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 2.5rem;
+      margin-bottom: 1rem;
+    }
+
+    /* Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      background-color: #3C2A1E; /* Matches header */
+      color: #fff; /* White for footer text */
+      z-index: 1002;
+      display: grid;
+      grid-template-columns: 1fr auto 1fr;
+      align-items: center;
+      padding: 0.5rem 0;
+    }
+
+    .footer-content {
+      grid-column: 2;
+      text-align: center;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: bold;
+    }
+
+    .footer-image {
+      grid-column: 3;
+      justify-self: end;
+      height: 40px;
+      width: auto;
+      margin-right: 1rem;
+    }
+
+    footer a {
+      color: #fff; /* White for footer links */
+      text-decoration: none;
+    }
+
+    /* Buffer space at bottom */
+    .spacer {
+      height: 120px;
+    }
+  </style>
 </head>
 <body>
-    <header>
-        <nav>
-            <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="portfolio.html">Portfolio</a></li>
-                <li><a href="blog.html">Blog</a></li>
-                <li><a href="gear.html">Gear and Skills</a></li>
-                <li><a href="services.html">Types of Video Work</a></li>
-                <li><a href="contact.html">Contact</a></li>
-            </ul>
-        </nav>
-    </header>
 
-    <main>
-        <h1>Portfolio</h1>
-        <p>Showcase of past work will be displayed here.</p>
-    </main>
+<header>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="header-image">
+  <nav>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="portfolio.html">Portfolio</a></li>
+      <li><a href="blog.html">Blog</a></li>
+      <li><a href="gear.html">Gear & Skills</a></li>
+      <li><a href="services.html">Types of Video Work</a></li>
+      <li><a href="contact.html">Contact</a></li>
+    </ul>
+  </nav>
+</header>
 
-    <footer>
-        <p>Contact: <a href="mailto:j_c@dawninfinite.com">j_c@dawninfinite.com</a> | Phone: <strong>(815) 681-8696</strong></p>
-    </footer>
+<div class="container">
+  <blockquote>
+    "I never cared so much about making perfect sense. I wanted to make perfect nonsense."
+    <p>— Harmony Korine</p>
+  </blockquote>
+
+  <h1>Portfolio</h1>
+  <p>Welcome to my visual diary—a collection of moments frozen in time, where raw emotion takes center stage. I’m JC, a videographer who believes that the most powerful stories are the ones that unfold naturally. From the quiet tears of a wedding vow to the electric energy of a live concert, my work captures the unscripted beauty of life. Dive into these cinematic snapshots and see the world through my lens, where every frame tells a story worth remembering.</p>
+
+  <p><em>Showcase of past work will be displayed here.</em></p>
+</div>
+
+<div class="spacer"></div>
+
+<footer>
+  <div class="footer-content">
+    <p>j_c@dawninfinite.com | (815)681-8696</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a></p>
+  </div>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image">
+</footer>
+
 </body>
 </html>
