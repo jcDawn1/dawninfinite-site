@@ -7,128 +7,111 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link 
     href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" 
-    rel="stylesheet"
-  >
+    rel="stylesheet">
   <style>
-    /* Basic Reset */
-    * {
+    /* Reset */
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Body Styling */
-    body {
-      background-color: #f5f1e9; /* Soft beige */
+      background-color: #f5f1e9;
       color: #000;
-      margin: 0;
+      font-size: 16px;
       line-height: 1.6;
     }
-
-    /* Header & Nav */
+    /* Fixed Header */
     header {
-      background-color: #4e342e; /* Matches the footer */
-      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4e342e;
       text-align: center;
+      padding: 0.5rem 0;
+      z-index: 1000;
     }
-
     nav ul {
       display: flex;
       justify-content: center;
       list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
-
     nav ul li {
       margin: 0 1rem;
     }
-
     nav ul li a {
       text-decoration: none;
-      color: #fff; /* Same as footer text */
-      font-family: 'Montserrat', sans-serif; /* Nav font */
+      color: #fff;
+      font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 0.9rem;
     }
-
-    /* Content Wrapper */
+    /* Fixed Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4e342e;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      z-index: 1000;
+    }
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    /* Content Wrapper with extra margin for header/footer */
     .content-wrapper {
+      margin: 80px auto 120px auto;
       max-width: 1000px;
-      margin: 2rem auto 4rem auto;
       padding: 0 1rem;
     }
-
     /* Blockquote (Quote) */
     blockquote {
-      font-family: 'Lora', serif; /* Quote font */
-      color: #cc9966; /* Makes the quote stand out */
+      font-family: 'Lora', serif;
+      color: #cc9966;
       font-style: italic;
       margin: 1rem auto;
       max-width: 800px;
       text-align: center;
       font-weight: 400;
     }
-
     blockquote p {
       text-align: right;
       font-weight: 700;
       margin-top: 0.5rem;
     }
-
     /* Main Heading */
     h1 {
-      font-family: 'Playfair Display', serif; /* H1 font */
+      font-family: 'Playfair Display', serif;
       text-align: center;
       margin: 1.5rem 0 1rem 0;
       font-weight: 700;
     }
-
-    /* Paragraph/Text Styling */
-    p, li {
-      font-family: 'Roboto', sans-serif; /* Body paragraphs */
-      font-weight: 400;
-      margin-bottom: 1rem;
-    }
-
-    /* Subheadings within the blog post */
+    /* Subheadings */
     h2, h3 {
       font-family: 'Playfair Display', serif;
       margin: 2rem 0 1rem 0;
       font-weight: 700;
     }
-
+    /* Paragraphs and Lists */
+    p, li {
+      font-family: 'Roboto', sans-serif;
+      font-weight: 400;
+      margin-bottom: 1rem;
+    }
     ul {
       margin-left: 1.5rem;
       list-style-type: disc;
     }
-
-    /* Footer */
-    footer {
-      background-color: #4e342e;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      font-family: 'Montserrat', sans-serif; /* Matches nav */
-      font-weight: 700;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
-    }
-
-    /* Optional: Add some margin at the bottom so content doesn't hide under the fixed footer */
-    .push-bottom {
-      margin-bottom: 100px;
-    }
   </style>
 </head>
 <body>
-
   <header>
     <nav>
       <ul>
@@ -142,31 +125,25 @@
     </nav>
   </header>
 
-  <div class="content-wrapper push-bottom">
+  <div class="content-wrapper">
     <blockquote>
-      "Life is very, very complicated, and so films should be allowed to be too."
-      <p>David Lynch</p>
+      "It's only after we've lost everything that we're free to do anything."
+      <p>Chuck Palahniuk, <em>Fight Club</em></p>
     </blockquote>
 
     <h1>The Art of Capturing Life: A Videographer’s Manifesto</h1>
 
     <p>
-      There’s something downright magical about hitting the record button at just the right moment. 
-      Not when everything’s picture-perfect, but when everything’s beautifully and perfectly human.
+      There’s something downright magical about hitting the record button at just the right moment. Not when everything’s picture-perfect, but when everything’s beautifully and perfectly human.
     </p>
 
     <p>
-      I’m JC, and my mission is to capture raw emotions through my lens. While many might start with 
-      their gear specs or technical know-how, I’m here to share a different kind of story. A story told 
-      in teary-eyed wedding vows, hearty laughs at receptions, and those fleeting glances between people in love.
+      I’m JC, and my mission is to capture raw emotions through my lens. While many might start with their gear specs or technical know-how, I’m here to share a different kind of story. A story told in teary-eyed wedding vows, hearty laughs at receptions, and those fleeting glances between people in love.
     </p>
 
     <h2>Why Traditional Videography Doesn’t Quite Catch It</h2>
     <p>
-      Most videographers will emphasize perfect lighting, smooth shots, and seamless transitions. 
-      They aren’t wrong, but they’re skipping over something truly essential. In today’s world, 
-      where AI can create flawless scenes and algorithms can edit videos with precision, the real treasure 
-      is in capturing what tech can’t:
+      Most videographers will emphasize perfect lighting, smooth shots, and seamless transitions. They aren’t wrong, but they’re skipping over something truly essential. In today’s world, where AI can create flawless scenes and algorithms can edit videos with precision, the real treasure is in capturing what tech can’t:
     </p>
     <ul>
       <li>The slight wobble in a dad’s voice during his toast</li>
@@ -176,9 +153,7 @@
 
     <h2>From Artist to Visual Storyteller</h2>
     <p>
-      My journey didn’t begin with a camera. It started with messy sketches, late-night jam sessions 
-      (apologies to my old neighbors), and an insatiable craving to create. This eclectic background 
-      taught me a vital lesson: it’s not technical perfection that moves people. It’s authenticity.
+      My journey didn’t begin with a camera. It started with messy sketches, late-night jam sessions (apologies to my old neighbors), and an insatiable craving to create. This eclectic background taught me a vital lesson: it’s not technical perfection that moves people. It’s authenticity.
     </p>
 
     <h2>The Unscripted Philosophy</h2>
@@ -193,15 +168,12 @@
 
     <h2>Beyond the Lens</h2>
     <p>
-      This is about more than just videography. It’s about preserving the moments that truly matter. 
-      While technology keeps advancing, it will never replace the human instinct to anticipate emotional moments, 
-      to feel the vibe in a room, or to sense when someone’s about to bust out their signature dance move.
+      This is about more than just videography. It’s about preserving the moments that truly matter. While technology keeps advancing, it will never replace the human instinct to anticipate emotional moments, to feel the vibe in a room, or to sense when someone’s about to bust out their signature dance move.
     </p>
 
     <h2>Join the Journey</h2>
     <p>
-      If you’re a believer in the power of authentic storytelling, if you value genuine moments over polished poses, 
-      and if you think the best stories are the unexpected ones – you’ve found your place.
+      If you’re a believer in the power of authentic storytelling, if you value genuine moments over polished poses, and if you think the best stories are the unexpected ones – you’ve found your place.
     </p>
 
     <p>
@@ -216,11 +188,8 @@
   <footer>
     <p>j_c@dawninfinite.com | (815)681-8696</p>
     <p>
-      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">
-        Visit Us On Facebook
-      </a>
+      <a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a>
     </p>
   </footer>
-
 </body>
 </html>
