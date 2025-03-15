@@ -5,7 +5,7 @@
   <title>Dawn Infinite Imagery</title>
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
-  
+
   <style>
     /* Reset Styles */
     html, body {
@@ -18,25 +18,29 @@
       line-height: 1.6;
     }
 
-    /* Parallax Background - no cropping */
+    /* Fullscreen Parallax Background */
     .parallax {
       background-image: url('hero-image.jpeg');
-      min-height: 100vh;
+      height: 100vh;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover;
+      background-size: contain; /* Ensures full image without cropping */
       display: flex;
       align-items: center;
       justify-content: center;
     }
 
-    /* Transparent overlay for readability (minimal opacity) */
+    /* Overlay Text */
     .parallax h1 {
       font-family: 'Playfair Display', serif;
       color: white;
       font-size: 3rem;
       text-shadow: 2px 2px 8px rgba(0,0,0,0.8);
+      text-align: center;
+      background: rgba(0, 0, 0, 0.4); /* Subtle background to make text pop */
+      padding: 1rem;
+      border-radius: 8px;
     }
 
     /* Fixed Header */
@@ -69,12 +73,12 @@
       font-weight: 700;
     }
 
-    /* Main Content */
+    /* Transparent Content Wrapper */
     .content-wrapper {
       max-width: 800px;
       margin: 4rem auto;
       padding: 2rem;
-      background-color: rgba(78, 52, 46, 0.6); /* Transparent enough to clearly see image */
+      background-color: rgba(0, 0, 0, 0.5); /* Fully transparent overlay */
       border-radius: 12px;
       text-align: justify;
     }
