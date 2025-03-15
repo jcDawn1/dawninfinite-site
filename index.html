@@ -41,8 +41,20 @@
       left: 0;
       width: 100%;
       background-color: rgba(78, 52, 46, 0.85);
-      padding: 0.5rem 0;
+      padding: 0.5rem 1rem;
       z-index: 1002;
+      display: flex;
+      align-items: center;
+    }
+
+    .header-image {
+      height: 40px;
+      width: auto;
+      margin-right: 1rem; /* Space between image and nav */
+    }
+
+    nav {
+      flex: 1;
     }
 
     nav ul {
@@ -132,12 +144,21 @@
       bottom: 0;
       width: 100%;
       background-color: rgba(78, 52, 46, 0.85);
-      color: #fff;
-      text-align: center;
-      padding: 0.5rem 0;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: bold;
+      padding: 0.5rem 1rem;
       z-index: 1002;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    .footer-content {
+      text-align: center;
+    }
+
+    .footer-image {
+      height: 40px;
+      width: auto;
+      margin-left: 1rem; /* Space between content and image */
     }
 
     footer a {
@@ -149,6 +170,7 @@
 <body>
 
 <header>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="header-image">
   <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
@@ -182,8 +204,11 @@
 </div>
 
 <footer>
-  <p>j_c@dawninfinite.com | (815)681-8696</p>
-  <p><a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a></p>
+  <div class="footer-content">
+    <p>j_c@dawninfinite.com | (815)681-8696</p>
+    <p><a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a></p>
+  </div>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image">
 </footer>
 
 </body>
