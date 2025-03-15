@@ -5,37 +5,39 @@
   <title>Services</title>
   <!-- Google Fonts: Multiple families for varied typography -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link 
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" 
+  <link
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
     rel="stylesheet"
   >
   <style>
-    /* Basic Reset */
-    * {
+    /* Reset */
+    html, body {
       margin: 0;
       padding: 0;
-      box-sizing: border-box;
-    }
-
-    /* Body Styling */
-    body {
       background-color: #f5f1e9; /* Soft beige */
       color: #000;
-      margin: 0;
+      font-size: 16px;
       line-height: 1.6;
     }
 
-    /* Header & Nav */
+    /* Fixed Header */
     header {
-      background-color: #4e342e; /* Matches the footer */
-      padding: 1rem 0;
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4e342e; /* Dark brown */
       text-align: center;
+      padding: 0.5rem 0; /* Smaller padding for reduced header height */
+      z-index: 1000;
     }
 
     nav ul {
       display: flex;
       justify-content: center;
       list-style-type: none;
+      margin: 0;
+      padding: 0;
     }
 
     nav ul li {
@@ -44,16 +46,38 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #fff; /* Same as footer text */
+      color: #fff;
       font-family: 'Montserrat', sans-serif; /* Nav font */
       font-weight: 700;
       font-size: 0.9rem;
     }
 
-    /* Content Wrapper */
+    /* Fixed Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4e342e;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem 0; /* Smaller padding for reduced footer height */
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      z-index: 1000;
+    }
+
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+
+    /* Main Content Wrapper */
     .content-wrapper {
+      /* Large top/bottom margins to prevent overlap with fixed header & footer */
+      margin: 80px auto 80px auto;
       max-width: 1000px;
-      margin: 2rem auto 4rem auto;
       padding: 0 1rem;
     }
 
@@ -113,6 +137,7 @@
       padding-left: 0;
       font-family: 'Roboto', sans-serif; /* Lists in body font */
       font-weight: 400;
+      margin-bottom: 1.5rem;
     }
 
     .service-list li {
@@ -124,26 +149,6 @@
       font-size: 1.1rem;
       margin-bottom: 0.3rem;
       font-family: 'Roboto', sans-serif;
-    }
-
-    /* Footer */
-    footer {
-      background-color: #4e342e;
-      color: #fff;
-      text-align: center;
-      padding: 1rem 0;
-      position: fixed;
-      width: 100%;
-      bottom: 0;
-      left: 0;
-      font-family: 'Montserrat', sans-serif; /* Matches nav */
-      font-weight: 700;
-    }
-
-    footer a {
-      color: #fff;
-      text-decoration: none;
-      font-weight: 700;
     }
   </style>
 </head>
@@ -244,6 +249,5 @@
       </a>
     </p>
   </footer>
-
 </body>
 </html>
