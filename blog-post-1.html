@@ -33,9 +33,14 @@
       text-align: center;
       position: relative;
       z-index: 1;
+    }
+
+    /* Content Box (Translucent Box Starting After Quote) */
+    .content-box {
       background-color: rgba(255, 255, 255, 0.7); /* Translucent white to match contact form */
       border-radius: 6px; /* Rounded corners to match contact form */
       box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Shadow to match contact form */
+      padding: 1.5rem 3rem; /* Match container padding */
     }
 
     /* Fixed Header */
@@ -97,29 +102,29 @@
     }
 
     /* Blog Title and Text */
-    .container h1,
-    .container h2,
-    .container p,
-    .container ul li,
-    .container ol li {
+    .content-box h1,
+    .content-box h2,
+    .content-box p,
+    .content-box ul li,
+    .content-box ol li {
       color: #f5f1e9; /* Light cream for main text */
       text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Enhanced shadow for readability */
     }
 
-    .container h1 {
+    .content-box h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
       margin-bottom: 1rem;
     }
 
-    .container h2 {
+    .content-box h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       margin: 1.5rem 0 1rem;
     }
 
-    .container ul,
-    .container ol {
+    .content-box ul,
+    .content-box ol {
       list-style-position: inside;
       padding-left: 0;
     }
@@ -205,42 +210,44 @@
     <p>— Chuck Palahniuk, <em>Diary</em></p>
   </blockquote>
 
-  <h1>1 - The Art of Capturing Life: A Videographer’s Manifesto</h1>
-  <p><strong>March 17, 2025</strong></p>
+  <div class="content-box">
+    <h1>1 - The Art of Capturing Life: A Videographer’s Manifesto</h1>
+    <p><strong>March 17, 2025</strong></p>
 
-  <p>There’s something downright magical about hitting the record button at just the right moment. Not when everything’s picture-perfect, but when everything’s beautifully and perfectly human.</p>
+    <p>There’s something downright magical about hitting the record button at just the right moment. Not when everything’s picture-perfect, but when everything’s beautifully and perfectly human.</p>
 
-  <p>I’m JC, and my mission is to capture raw emotions through my lens. While many might start with their gear specs or technical know-how, I’m here to share a different kind of story. A story told in teary-eyed wedding vows, hearty laughs at receptions, and those fleeting glances between people in love.</p>
+    <p>I’m JC, and my mission is to capture raw emotions through my lens. While many might start with their gear specs or technical know-how, I’m here to share a different kind of story. A story told in teary-eyed wedding vows, hearty laughs at receptions, and those fleeting glances between people in love.</p>
 
-  <h2>Why Traditional Videography Doesn’t Quite Catch It</h2>
-  <p>Most videographers will emphasize perfect lighting, smooth shots, and seamless transitions. They aren’t wrong, but they’re skipping over something truly essential. In today’s world, where AI can create flawless scenes and algorithms can edit videos with precision, the real treasure is in capturing what tech can’t:</p>
+    <h2>Why Traditional Videography Doesn’t Quite Catch It</h2>
+    <p>Most videographers will emphasize perfect lighting, smooth shots, and seamless transitions. They aren’t wrong, but they’re skipping over something truly essential. In today’s world, where AI can create flawless scenes and algorithms can edit videos with precision, the real treasure is in capturing what tech can’t:</p>
 
-  <ul>
-    <li>The slight wobble in a dad’s voice during his toast</li>
-    <li>The impromptu dance-off between grandma and the ring bearer</li>
-    <li>Those quiet, unnoticed moments when no one thinks they’re on camera</li>
-  </ul>
+    <ul>
+      <li>The slight wobble in a dad’s voice during his toast</li>
+      <li>The impromptu dance-off between grandma and the ring bearer</li>
+      <li>Those quiet, unnoticed moments when no one thinks they’re on camera</li>
+    </ul>
 
-  <h2>From Artist to Visual Storyteller</h2>
-  <p>My journey didn’t begin with a camera. It started with messy sketches, late-night jam sessions (apologies to my old neighbors), and an insatiable craving to create. This eclectic background taught me a vital lesson: it’s not technical perfection that moves people. It’s authenticity.</p>
+    <h2>From Artist to Visual Storyteller</h2>
+    <p>My journey didn’t begin with a camera. It started with messy sketches, late-night jam sessions (apologies to my old neighbors), and an insatiable craving to create. This eclectic background taught me a vital lesson: it’s not technical perfection that moves people. It’s authenticity.</p>
 
-  <h2>The Unscripted Philosophy</h2>
-  <p>Here’s what makes my approach unique:</p>
-  <ol>
-    <li>I’m on the hunt for genuine emotions, not staged perfection.</li>
-    <li>I believe in letting moments unfold naturally, rather than forcing them.</li>
-    <li>I capture stories as they happen, unscripted and spontaneous.</li>
-  </ol>
+    <h2>The Unscripted Philosophy</h2>
+    <p>Here’s what makes my approach unique:</p>
+    <ol>
+      <li>I’m on the hunt for genuine emotions, not staged perfection.</li>
+      <li>I believe in letting moments unfold naturally, rather than forcing them.</li>
+      <li>I capture stories as they happen, unscripted and spontaneous.</li>
+    </ol>
 
-  <h2>Beyond the Lens</h2>
-  <p>This is about more than just videography. It’s about preserving the moments that truly matter. While technology keeps advancing, it will never replace the human instinct to anticipate emotional moments, to feel the vibe in a room, or to sense when someone’s about to bust out their signature dance move.</p>
+    <h2>Beyond the Lens</h2>
+    <p>This is about more than just videography. It’s about preserving the moments that truly matter. While technology keeps advancing, it will never replace the human instinct to anticipate emotional moments, to feel the vibe in a room, or to sense when someone’s about to bust out their signature dance move.</p>
 
-  <h2>Join the Journey</h2>
-  <p>If you’re a believer in the power of authentic storytelling, if you value genuine moments over polished poses, and if you think the best stories are the unexpected ones – you’ve found your place.</p>
+    <h2>Join the Journey</h2>
+    <p>If you’re a believer in the power of authentic storytelling, if you value genuine moments over polished poses, and if you think the best stories are the unexpected ones – you’ve found your place.</p>
 
-  <p>Let’s celebrate the beautiful chaos of real life together. No filters necessary.</p>
+    <p>Let’s celebrate the beautiful chaos of real life together. No filters necessary.</p>
 
-  <p><strong>Ready to dive into the world of unscripted magic? Grab your camera and let’s create some unforgettable stories!</strong></p>
+    <p><strong>Ready to dive into the world of unscripted magic? Grab your camera and let’s create some unforgettable stories!</strong></p>
+  </div>
 </div>
 
 <div class="comments">
