@@ -8,12 +8,18 @@
 
   <style>
     /* Reset Styles */
-    html, body {
+    html {
+      box-sizing: border-box;
+    }
+    *, *:before, *:after {
+      box-sizing: inherit;
+    }
+    body {
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
-      color: #333333;
-      background-color: #FFFDD0;
+      color: #f5f1e9; /* Light cream for main text */
+      background-color: #FFFDD0; /* Cream background */
       height: 100%;
       overflow-x: hidden;
       line-height: 1.6;
@@ -25,6 +31,8 @@
       margin: 3rem auto;
       padding: 1.5rem 3rem;
       text-align: center;
+      position: relative;
+      z-index: 1;
     }
 
     /* Fixed Header */
@@ -33,7 +41,7 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: rgba(60, 40, 35, 0.85);
+      background-color: #3C2A1E; /* Universal dark brown */
       padding: 0.5rem 1rem;
       z-index: 1002;
       display: flex;
@@ -64,7 +72,7 @@
 
     nav ul li a {
       text-decoration: none;
-      color: #f5f1e9; /* Lighter font color for header links */
+      color: #fff; /* White for nav links */
       font-family: 'Montserrat', sans-serif;
       font-weight: 700;
     }
@@ -73,7 +81,7 @@
     blockquote {
       font-family: 'Lora', serif;
       font-style: italic;
-      color: #8B4513;
+      color: #7B3F00; /* Darker orange-brown for quote */
       margin-bottom: 2rem;
       text-align: center;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
@@ -88,7 +96,8 @@
     /* Content Text */
     .container h2,
     .container p {
-      color: #333333;
+      color: #f5f1e9; /* Light cream for main text */
+      text-shadow: 1px 1px 4px rgba(0,0,0,0.6);
     }
 
     .container h2 {
@@ -106,13 +115,13 @@
 
     .blog-post a {
       text-decoration: none;
-      color: #333333;
+      color: #f5f1e9; /* Light cream for link */
       font-family: 'Montserrat', sans-serif;
       font-size: 1.4rem;
     }
 
     .blog-post a:hover {
-      color: #8B4513;
+      color: #7B3F00; /* Darker orange-brown on hover */
     }
 
     /* Footer */
@@ -120,8 +129,8 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: rgba(60, 40, 35, 0.85);
-      color: #f5f1e9; /* Lighter font color for footer text */
+      background-color: #3C2A1E; /* Matches header for universal color */
+      color: #fff; /* White for footer text */
       z-index: 1002;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
@@ -145,7 +154,7 @@
     }
 
     footer a {
-      color: #f5f1e9; /* Lighter font color for footer links */
+      color: #fff; /* White for footer links */
       text-decoration: none;
     }
 
