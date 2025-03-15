@@ -5,33 +5,33 @@
   <title>The Blog</title>
   <!-- Google Fonts: Multiple families for varied typography -->
   <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link
-    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap"
+  <link 
+    href="https://fonts.googleapis.com/css2?family=Lora:wght@400;700&family=Montserrat:wght@400;700&family=Playfair+Display:wght@400;700&family=Roboto:wght@400;700&display=swap" 
     rel="stylesheet"
   >
   <style>
-    /* Basic Reset & Layout to ensure scrolling and footer at bottom */
+    /* Reset */
     html, body {
-      height: 100%;
       margin: 0;
       padding: 0;
-    }
-
-    body {
-      display: flex;
-      flex-direction: column;
       background-color: #f5f1e9; /* Soft beige */
       color: #000;
-      line-height: 1.6;
       font-size: 16px;
+      line-height: 1.6;
     }
-
+    
+    /* Fixed Header */
     header {
+      position: fixed;
+      top: 0;
+      left: 0;
+      width: 100%;
       background-color: #4e342e; /* Dark brown */
-      padding: 1rem 0;
       text-align: center;
+      padding: 0.5rem 0;
+      z-index: 1000;
     }
-
+    
     nav ul {
       display: flex;
       justify-content: center;
@@ -39,27 +39,47 @@
       margin: 0;
       padding: 0;
     }
-
+    
     nav ul li {
       margin: 0 1rem;
     }
-
+    
     nav ul li a {
       text-decoration: none;
       color: #fff;
-      font-family: 'Montserrat', sans-serif; /* Nav font */
+      font-family: 'Montserrat', sans-serif;
       font-weight: 700;
       font-size: 0.9rem;
     }
-
+    
+    /* Fixed Footer */
+    footer {
+      position: fixed;
+      bottom: 0;
+      left: 0;
+      width: 100%;
+      background-color: #4e342e;
+      color: #fff;
+      text-align: center;
+      padding: 0.5rem 0;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      z-index: 1000;
+    }
+    
+    footer a {
+      color: #fff;
+      text-decoration: none;
+      font-weight: 700;
+    }
+    
     /* Main Content Wrapper */
     .content-wrapper {
-      flex: 1; /* Pushes footer down */
+      margin: 80px auto 120px auto; /* Space for fixed header/footer with extra buffer */
       max-width: 1000px;
-      margin: 2rem auto;
       padding: 0 1rem;
     }
-
+    
     /* Blockquote (Quote) */
     blockquote {
       font-family: 'Lora', serif;
@@ -70,13 +90,13 @@
       text-align: center;
       font-weight: 400;
     }
-
+    
     blockquote p {
       text-align: right;
       font-weight: 700;
       margin-top: 0.5rem;
     }
-
+    
     /* Main Heading */
     h1 {
       font-family: 'Playfair Display', serif;
@@ -84,7 +104,7 @@
       margin: 1.5rem 0 1rem 0;
       font-weight: 700;
     }
-
+    
     /* Intro Paragraph */
     .intro-text {
       font-family: 'Roboto', sans-serif;
@@ -93,54 +113,34 @@
       text-align: center;
       font-weight: 400;
     }
-
-    /* Section for Blog Links */
-    .section-wrapper {
-      max-width: 800px;
+    
+    /* Latest Blog Section */
+    .latest-blog {
+      text-align: center;
       margin: 2rem auto;
     }
-
-    .section-wrapper h2 {
-      font-family: 'Playfair Display', serif;
-      text-align: left;
-      margin: 1rem 0 0.5rem 0;
-      font-size: 1.3rem;
-      letter-spacing: 1px;
-      font-weight: 700;
-    }
-
-    .category-list, .recent-posts {
+    
+    .latest-blog a {
       font-family: 'Roboto', sans-serif;
-      list-style-type: disc;
-      margin-left: 1.5rem;
-      font-weight: 400;
-      margin-bottom: 2rem;
-    }
-
-    .category-list li, .recent-posts li {
-      margin: 0.5rem 0;
-    }
-
-    /* Footer at bottom */
-    footer {
-      background-color: #4e342e;
-      color: #fff;
-      text-align: center;
-      font-family: 'Montserrat', sans-serif;
+      font-size: 1.1rem;
       font-weight: 700;
-      padding: 1rem 0;
-      margin-top: auto; /* Ensures footer stays at bottom */
-    }
-
-    footer a {
-      color: #fff;
+      color: #4e342e;
       text-decoration: none;
-      font-weight: 700;
+    }
+    
+    .latest-blog a:hover {
+      text-decoration: underline;
+    }
+    
+    .post-date {
+      font-family: 'Roboto', sans-serif;
+      color: #555;
+      margin-top: 0.25rem;
+      font-size: 0.9rem;
     }
   </style>
 </head>
 <body>
-
   <header>
     <nav>
       <ul>
@@ -153,40 +153,24 @@
       </ul>
     </nav>
   </header>
-
+  
   <div class="content-wrapper">
     <blockquote>
       "I don't know why people expect art to make sense. 
       They accept the fact that life doesn't make sense."
       <p>David Lynch</p>
     </blockquote>
-
+    
     <h1>The Blog</h1>
     <p class="intro-text">
-      Welcome to my blogging space. Below, you’ll find links to categories 
-      of content and my latest post. Dive in and discover new insights on 
-      filmmaking, creativity, and more.
+      Welcome to my blog. Check out the latest post below.
     </p>
-
-    <div class="section-wrapper">
-      <h2>Categories</h2>
-      <ul class="category-list">
-        <!-- Updated link to the new Filmmaking Insights page -->
-        <li><a href="filmmaking-insights.html">Filmmaking Insights</a></li>
-        <li><a href="#">Behind the Scenes</a></li>
-        <li><a href="#">Creative Struggles</a></li>
-        <li><a href="#">Gear Talk</a></li>
-      </ul>
+    
+    <div class="latest-blog">
+      <a href="blog-post-1.html">Capturing Life... - March 15, 2025</a>
     </div>
-
-    <div class="section-wrapper">
-      <h2>Recent Posts</h2>
-      <ul class="recent-posts">
-        <li><a href="blog-post-1.html">The Art of Capturing Life: A Videographer’s Manifesto</a></li>
-      </ul>
-    </div>
-  </div> <!-- End content-wrapper -->
-
+  </div>
+  
   <footer>
     <p>j_c@dawninfinite.com | (815)681-8696</p>
     <p>
@@ -195,6 +179,5 @@
       </a>
     </p>
   </footer>
-
 </body>
 </html>
