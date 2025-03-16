@@ -39,6 +39,11 @@
       z-index: 1;
     }
 
+    /* Content Box (No Background to Match Home Page) */
+    .content-box {
+      padding: 1.5rem 3rem; /* Match container padding */
+    }
+
     /* Fixed Header */
     header {
       position: fixed;
@@ -85,7 +90,7 @@
     blockquote {
       font-family: 'Lora', serif;
       font-style: italic;
-      color: #7B3F00; /* Darker orange-brown for quote */
+      color: #7B3F00; /* Light brown for quote */
       margin-bottom: 2rem;
       text-align: center;
       text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
@@ -98,13 +103,13 @@
     }
 
     /* Section Headings and Text */
-    .container h2,
-    .container p {
-      color: #f5f1e9; /* Light cream for main text */
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Enhanced shadow for better readability */
+    .content-box h2,
+    .content-box p {
+      color: #fff; /* White text to match Home page */
+      text-shadow: 2px 2px 8px #7B3F00; /* Brown shadow to match Home page */
     }
 
-    .container h2 {
+    .content-box h2 {
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       margin-bottom: 1rem;
@@ -230,18 +235,20 @@
     <p>— Darren Aronofsky</p>
   </blockquote>
 
-  <h2>Contact Me</h2>
-  <p>If you're ready to bring your vision to life, fill out the form below and I'll get back to you within 24 hours. For immediate needs, you can reach me using the contact information at the bottom of this page.</p>
+  <div class="content-box">
+    <h2>Contact Me</h2>
+    <p>If you're ready to bring your vision to life, fill out the form below and I'll get back to you within 24 hours. For immediate needs, you can reach me using the contact information at the bottom of this page.</p>
 
-  <form action="https://formspree.io/f/xeoaqjoq" method="POST">
-    <div class="form-row">
-      <input type="text" name="name" placeholder="Your Name" required>
-      <input type="tel" name="phone" placeholder="Your Phone Number">
-      <input type="email" name="email" placeholder="Your Email" required>
-    </div>
-    <textarea name="message" placeholder="Your Message" required></textarea>
-    <button type="submit">Send Message</button>
-  </form>
+    <form action="https://formspree.io/f/xeoaqjoq" method="POST">
+      <div class="form-row">
+        <input type="text" name="name" placeholder="Your Name" required>
+        <input type="tel" name="phone" placeholder="Your Phone Number">
+        <input type="email" name="email" placeholder="Your Email" required>
+      </div>
+      <textarea name="message" placeholder="Your Message" required></textarea>
+      <button type="submit">Send Message</button>
+    </form>
+  </div>
 </div>
 
 <div class="spacer"></div>
