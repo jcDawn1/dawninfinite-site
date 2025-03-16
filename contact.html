@@ -39,8 +39,11 @@
       z-index: 1;
     }
 
-    /* Content Box (No Background to Match Home Page) */
+    /* Content Box (White Box to Match Other Pages) */
     .content-box {
+      background-color: rgba(255, 255, 255, 0.7); /* Translucent white */
+      border-radius: 6px; /* Rounded corners */
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Subtle shadow */
       padding: 1.5rem 3rem; /* Match container padding */
     }
 
@@ -105,8 +108,8 @@
     /* Section Headings and Text */
     .content-box h2,
     .content-box p {
-      color: #fff; /* White text to match Home page */
-      text-shadow: 2px 2px 8px #7B3F00; /* Light brown shadow to match Home page */
+      color: #7B3F00; /* Light brown text to match other pages */
+      text-shadow: 2px 2px 8px #7B3F00; /* Brown shadow to match other pages */
     }
 
     .content-box h2 {
@@ -138,15 +141,15 @@
       border: 1px solid rgba(255, 255, 255, 0.2);
       border-radius: 6px;
       background-color: rgba(255, 255, 255, 0.7); /* Translucent white */
-      color: #fff; /* White text for readability */
+      color: #3C2A1E; /* Dark brown text for readability against white box */
       font-family: 'Roboto', sans-serif;
       box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Shadow for text boxes */
     }
 
     input::placeholder,
     textarea::placeholder {
-      color: rgba(255, 255, 255, 0.7); /* Lighter placeholder text */
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3); /* Shadow for placeholder text */
+      color: #7B3F00; /* Light brown placeholder text to match theme */
+      text-shadow: none; /* Remove shadow for placeholder text */
     }
 
     textarea {
