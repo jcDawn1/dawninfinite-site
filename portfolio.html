@@ -35,6 +35,14 @@
       z-index: 1;
     }
 
+    /* Content Box (Translucent White Box) */
+    .content-box {
+      background-color: rgba(255, 255, 255, 0.7); /* Translucent white */
+      border-radius: 6px; /* Rounded corners */
+      box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Subtle shadow */
+      padding: 1.5rem 3rem; /* Match container padding */
+    }
+
     /* Fixed Header */
     header {
       position: fixed;
@@ -93,14 +101,14 @@
       margin-top: 0.5rem;
     }
 
-    /* Section Headings and Text */
-    .container h1,
-    .container p {
-      color: #f5f1e9; /* Light cream for main text */
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Enhanced shadow for readability */
+    /* Section Headings and Text within Content Box */
+    .content-box h1,
+    .content-box p {
+      color: #7B3F00; /* Light brown text */
+      text-shadow: 2px 2px 8px #7B3F00; /* Brown shadow matching other pages */
     }
 
-    .container h1 {
+    .content-box h1 {
       font-family: 'Playfair Display', serif;
       font-size: 2.5rem;
       margin-bottom: 1rem;
@@ -168,10 +176,12 @@
     <p>— Harmony Korine</p>
   </blockquote>
 
-  <h1>Portfolio</h1>
-  <p>Welcome to my visual diary—a collection of moments frozen in time, where raw emotion takes center stage. I’m JC, a videographer who believes that the most powerful stories are the ones that unfold naturally. From the quiet tears of a wedding vow to the electric energy of a live concert, my work captures the unscripted beauty of life. Dive into these cinematic snapshots and see the world through my lens, where every frame tells a story worth remembering.</p>
+  <div class="content-box">
+    <h1>Portfolio</h1>
+    <p>Welcome to my visual diary—a collection of moments frozen in time, where raw emotion takes center stage. I’m JC, a videographer who believes that the most powerful stories are the ones that unfold naturally. From the quiet tears of a wedding vow to the electric energy of a live concert, my work captures the unscripted beauty of life. Dive into these cinematic snapshots and see the world through my lens, where every frame tells a story worth remembering.</p>
 
-  <p><em>Showcase of past work will be displayed here.</em></p>
+    <p><em>Showcase of past work will be displayed here.</em></p>
+  </div>
 </div>
 
 <div class="spacer"></div>
