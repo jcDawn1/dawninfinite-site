@@ -122,25 +122,30 @@
 
     /* Questions Button */
     .questions-button {
-      position: fixed;
-      bottom: 60px; /* Positioned above the footer */
-      right: 20px;
+      display: block;
+      margin: 2rem auto 0; /* Centered with top margin for spacing */
       background-color: #3C2A1E; /* Matches header/footer */
-      padding: 0.5rem 1rem;
+      padding: 0.75rem 1.5rem; /* Larger padding for noticeability */
       border-radius: 5px;
-      z-index: 1003;
+      width: fit-content;
     }
 
     .questions-button a {
-      color: #fff; /* White text */
+      color: #7B3F00; /* Light brown text to match page */
       text-decoration: none;
-      font-family: 'Montserrat', sans-serif;
-      font-weight: 700;
-      font-size: 1rem;
+      font-family: 'Playfair Display', serif; /* Match heading font for consistency */
+      font-size: 1.25rem; /* Larger font for noticeability */
+      font-weight: 700; /* Bold for emphasis */
+      text-shadow: 2px 2px 8px #7B3F00; /* Same text effects as other elements */
     }
 
     .questions-button:hover {
       background-color: #7B3F00; /* Light brown on hover */
+    }
+
+    .questions-button:hover a {
+      color: #fff; /* White text on hover for contrast */
+      text-shadow: none; /* Remove shadow on hover for readability */
     }
 
     /* Footer */
@@ -240,6 +245,10 @@
     <p>A great edit is about more than just cutting footage together—it’s about finding the rhythm, the emotion, and the details that make a story come alive. With professional color grading, seamless transitions, and sound design that enhances every frame, I ensure that the final cut isn’t just polished—it’s unforgettable.</p>
 
     <p>At Dawn Infinite Imagery, no two projects are the same, because no two stories are. Whether you need a film, a keepsake, or a brand-defining piece of content, I bring the same level of dedication to every project: capturing what’s real, what’s raw, and what makes your vision worth remembering.</p>
+
+    <div class="questions-button">
+      <a href="contact.html">Questions?</a>
+    </div>
   </div>
 </div>
 
@@ -252,10 +261,6 @@
   </div>
   <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image">
 </footer>
-
-<div class="questions-button">
-  <a href="contact.html">Questions?</a>
-</div>
 
 </body>
 </html>
