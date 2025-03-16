@@ -100,12 +100,12 @@
       margin-top: 0.5rem;
     }
 
-    /* Blog Title and Text */
+    /* Blog Page Title and Text */
     .content-box h1,
     .content-box h2,
     .content-box p {
       color: #7B3F00; /* Light brown text */
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Subtle shadow for readability */
+      text-shadow: 2px 2px 8px #7B3F00; /* Brown shadow matching other pages */
     }
 
     .content-box h1 {
@@ -120,18 +120,15 @@
       margin: 1.5rem 0 1rem;
     }
 
-    /* Link Styling */
+    /* Blog Post Links */
     .content-box a {
-      color: #A0522D; /* Lighter brown for links */
-      text-decoration: none; /* Remove default underline */
-      border-bottom: 2px solid #D2691E; /* Brighter cinnamon border */
-      font-family: 'Roboto', sans-serif;
-      transition: color 0.3s ease, border-color 0.3s ease;
+      color: #7B3F00; /* Light brown for links */
+      text-decoration: none;
+      font-weight: bold;
     }
 
     .content-box a:hover {
-      color: #D2691E; /* Match border color on hover */
-      border-bottom-color: #A0522D; /* Lighter brown border on hover */
+      text-decoration: underline;
     }
 
     /* Footer */
@@ -192,16 +189,27 @@
 
 <div class="container">
   <blockquote>
-    "I don't know why people expect art to make sense. They accept the fact that life doesn't make sense."
-    <p>— David Lynch</p>
+    "The whole point of taking pictures is so that you don’t have to explain things with words."
+    <p>— Elliott Erwitt</p>
   </blockquote>
 
   <div class="content-box">
-    <h1>The Blog</h1>
-    <p>Welcome to my blogging space. Below, you'll find a link to my latest post. Dive in and explore my thoughts on filmmaking, creativity, and more.</p>
-    <h2>#1 - The Art of Capturing Life: A Videographer’s Manifesto</h2>
-    <p>(March 15, 2025)</p>
-    <p><a href="blog-post-1.html">Read More</a></p>
+    <h1>Blog</h1>
+    <p>Welcome to the Dawn Infinite Imagery blog, where I share insights, experiences, and stories from behind the lens. Dive into my journey as a videographer and explore the art of capturing life’s unscripted moments.</p>
+
+    <h2>Recent Posts</h2>
+    <p><a href="blog-post-1.html">1 - The Art of Capturing Life: A Videographer’s Manifesto</a></p>
+    <p>March 17, 2025</p>
+    <p>A deep dive into my philosophy as a videographer—why I prioritize raw emotion over staged perfection and how I capture the moments that truly matter.</p>
+
+    <h2>Coming Soon</h2>
+    <p><a href="#">2 - Behind the Scenes: Filming a Live Concert</a></p>
+    <p>April 2025</p>
+    <p>A look at the challenges and thrills of capturing the energy of a live event, with tips for aspiring videographers.</p>
+
+    <p><a href="#">3 - The Magic of Wedding Videography</a></p>
+    <p>May 2025</p>
+    <p>Exploring the art of filming weddings—how to anticipate emotional moments and create a cinematic keepsake that lasts a lifetime.</p>
   </div>
 </div>
 
