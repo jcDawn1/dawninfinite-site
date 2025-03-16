@@ -105,7 +105,7 @@
     .content-box h2,
     .content-box p {
       color: #7B3F00; /* Light brown text */
-      text-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Subtle shadow for readability */
+      text-shadow: 2px 2px 8px rgba(0,0,0,0.8); /* Enhanced shadow from Blog Post */
     }
 
     .content-box h1 {
@@ -118,6 +118,29 @@
       font-family: 'Playfair Display', serif;
       font-size: 2rem;
       margin: 1.5rem 0 1rem;
+    }
+
+    /* Questions Button */
+    .questions-button {
+      position: fixed;
+      bottom: 60px; /* Positioned above the footer */
+      right: 20px;
+      background-color: #3C2A1E; /* Matches header/footer */
+      padding: 0.5rem 1rem;
+      border-radius: 5px;
+      z-index: 1003;
+    }
+
+    .questions-button a {
+      color: #fff; /* White text */
+      text-decoration: none;
+      font-family: 'Montserrat', sans-serif;
+      font-weight: 700;
+      font-size: 1rem;
+    }
+
+    .questions-button:hover {
+      background-color: #7B3F00; /* Light brown on hover */
     }
 
     /* Footer */
@@ -229,6 +252,10 @@
   </div>
   <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image">
 </footer>
+
+<div class="questions-button">
+  <a href="contact.html">Questions?</a>
+</div>
 
 </body>
 </html>
