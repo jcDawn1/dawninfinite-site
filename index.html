@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Dawn Infinite Imagery</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Roboto&family=Cinzel+Decorative:wght@700&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Bebas+Neue&display=swap" rel="stylesheet">
 
   <style>
     /* Reset Styles */
@@ -17,9 +18,9 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Roboto', sans-serif;
-      color: #f5f1e9;
-      background-color: #FFFDD0;
+      font-family: 'Bebas Neue', sans-serif; /* Changed body font */
+      color: #eee; /* Almost-white text */
+      background-color: #1a1a1a; /* Dark charcoal background */
       height: 100%;
       overflow-x: hidden;
       line-height: 1.6;
@@ -27,17 +28,30 @@
 
     /* Parallax Background */
     .parallax {
-      background-image: url('IMG_0243.HEIC');
+      background-image: url('IMG_0243.HEIC'); /*  YOUR IMAGE HERE  */
       min-height: 100vh;
       background-attachment: fixed;
       background-position: center;
       background-repeat: no-repeat;
-      background-size: contain;
+      background-size: cover; /* Fill the entire viewport */
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
+      filter: grayscale(100%); /* Black and white image */
+    }
+
+    /* Overlay for Readability */
+    .parallax::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+      z-index: 1;
     }
 
     /* Fixed Header */
@@ -46,79 +60,116 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #3C2A1E; /* Universal dark brown color */
+      background-color: #1a1a1a; /* Matches body background */
       padding: 0.5rem 1rem;
       z-index: 1002;
       display: flex;
+      justify-content: space-between; /* Space between logo and nav */
       align-items: center;
     }
 
     .header-image {
-      height: 40px;
+      height: 50px; /* Slightly larger logo */
       width: auto;
       margin-right: 1rem;
     }
 
-    nav {
-      flex: 1;
-    }
-
     nav ul {
       display: flex;
-      justify-content: center;
       list-style: none;
       padding: 0;
       margin: 0;
     }
 
     nav ul li {
-      margin: 0 1rem;
+      margin: 0 1.5rem; /* More spacing between links */
     }
 
     nav ul li a {
       text-decoration: none;
-      color: #fff;
-      font-family: 'Montserrat', sans-serif;
+      color: #eee;
+      font-family: 'Rajdhani', sans-serif; /* Changed nav font */
       font-weight: 700;
+      text-transform: uppercase; /* Uppercase for impact */
+      position: relative; /* For underline effect */
     }
+    /* Animated Underline on Hover */
+      nav ul li a::after {
+          content: '';
+          position: absolute;
+          bottom: -3px;
+          left: 0;
+          width: 0;
+          height: 2px;
+          background-color: #00ffff; /* Electric blue underline */
+          transition: width 0.3s ease;
+      }
+
+      nav ul li a:hover::after {
+          width: 100%;
+      }
 
     /* Main Content */
     .content-wrapper {
       margin: 3rem 0;
-      padding: 1.5rem 3rem;
+      padding: 3rem; /* More generous padding */
       text-align: center;
       position: relative;
-      z-index: 1;
-      width: 100%;
+      z-index: 2; /* Above the overlay */
+      max-width: 800px; /* Limit content width for readability */
+      width: 90%; /* Responsive width */
     }
 
     .content-wrapper blockquote {
-      margin: 3rem 0;
+      margin: 4rem 0; /* More spacing around quote */
     }
 
     .content-wrapper h2 {
-      margin: 3rem 0 2rem;
+      margin: 4rem 0 2rem;
     }
 
     .content-wrapper p {
       margin: 1.5rem 0;
+      font-size: 1.2rem; /* Slightly larger body text */
     }
+/*Call To aciton button*/
+    .cta-button {
+        display: inline-block;
+        padding: 15px 30px;
+        background-color: #00ffff; /* Electric blue button */
+        color: #1a1a1a; /* Dark text on button */
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        text-decoration: none;
+        border: none;
+        border-radius: 5px; /* Slightly rounded corners */
+        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+        margin-top: 20px;
+     }
+
+.cta-button:hover {
+    background-color: #00d4d4;
+    transform: scale(1.05); /* Slight scale-up on hover */
+    cursor: pointer;
+}
 
     /* Overlay Text */
     .parallax h1 {
-      font-family: 'Cinzel Decorative', serif; /* Eye-catching cinematic font */
-      color: #f5f1e9;
-      font-size: 4rem; /* Enlarged */
-      text-shadow: 2px 2px 8px #7B3F00; /* Brown shadow */
+      font-family: 'Rajdhani', sans-serif; /* Changed heading font */
+      color: #eee;
+      font-size: 5rem; /* Even larger heading */
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Darker, subtle shadow */
       text-align: center;
-      margin: 6rem 0 2rem; /* Moved down with increased top margin */
+      margin: 6rem 0 2rem; /* Adjust as needed */
     }
 
     /* Quote Styling */
     blockquote {
-      font-family: 'Lora', serif;
+      font-family: 'Bebas Neue', cursive; /*Bold Font*/
+      font-size: 1.5rem; /* Larger quote */
       font-style: italic;
-      color: #7B3F00; /* Darker shade for better contrast */
+      color: #eee;
       text-align: center;
     }
 
@@ -131,13 +182,13 @@
     /* Content Text */
     .content-wrapper h2,
     .content-wrapper p {
-      color: #fff; /* White text */
-      text-shadow: 2px 2px 8px #7B3F00; /* Brown shadow similar to other pages */
+      color: #eee;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow */
     }
 
     .content-wrapper h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem; /* Match other pages */
+      font-family: 'Rajdhani', sans-serif; /* Changed heading font */
+      font-size: 2.5rem; /* Larger heading */
     }
 
     /* Scroll Buffer */
@@ -150,8 +201,8 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: #3C2A1E; /* Matches header for universal color */
-      color: #fff;
+      background-color: #1a1a1a; /* Matches header */
+      color: #eee;
       z-index: 1002;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
@@ -162,22 +213,26 @@
     .footer-content {
       grid-column: 2;
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Rajdhani', sans-serif; /* Changed footer font */
       font-weight: bold;
     }
 
     .footer-image {
       grid-column: 3;
       justify-self: end;
-      height: 40px;
+      height: 50px; /* Slightly larger logo */
       width: auto;
       margin-right: 1rem;
     }
 
     footer a {
-      color: #fff;
+      color: #00ffff; /* Electric blue for links */
       text-decoration: none;
     }
+      footer a:hover {
+        text-decoration: underline;
+      }
+
   </style>
 </head>
 <body>
@@ -197,22 +252,23 @@
 </header>
 
 <div class="parallax">
+    <div class="content-wrapper">
   <h1>Cinematic Visions: Real Life Stories</h1>
-  <div class="content-wrapper">
-    <blockquote>
-      "A lot of people ask me if I think horror movies have an effect on audiences. I say, 'Sure. But so do romantic comedies, war movies, and Westerns.'"
-      <p>— Wes Craven</p>
-    </blockquote>
+        <a href="portfolio.html" class="cta-button">Explore Our Work</a>
+  <blockquote>
+    "A lot of people ask me if I think horror movies have an effect on audiences. I say, 'Sure. But so do romantic comedies, war movies, and Westerns.'"
+    <p>— Wes Craven</p>
+  </blockquote>
 
-    <h2>Welcome to Dawn Infinite Imagery</h2>
-    <p>I'm JC, the heart and soul behind the camera. My journey into videography wasn't traditional. After years of exploring various paths and never quite feeling settled, I found what I'd been searching for in videography. At 39, I discovered I'd been living with undiagnosed ADHD, which explained my lifelong search for creativity, excitement, and freedom. Then, I picked up a camera, and suddenly, everything clicked.</p>
+  <h2>Welcome to Dawn Infinite Imagery</h2>
+  <p>I'm JC, the heart and soul behind the camera. My journey into videography wasn't traditional. After years of exploring various paths and never quite feeling settled, I found what I'd been searching for in videography. At 39, I discovered I'd been living with undiagnosed ADHD, which explained my lifelong search for creativity, excitement, and freedom. Then, I picked up a camera, and suddenly, everything clicked.</p>
 
-    <p>With videography, my mind is free to roam, explore, and create without limits. Whether capturing an emotional wedding ceremony, the energy of a live concert, or a spontaneous heartfelt moment, it's never the same experience twice, and that's exactly why I love it.</p>
+  <p>With videography, my mind is free to roam, explore, and create without limits. Whether capturing an emotional wedding ceremony, the energy of a live concert, or a spontaneous heartfelt moment, it's never the same experience twice, and that's exactly why I love it.</p>
 
-    <p>For me, it's not just about clients. By the time we finish a project, we've become friends. The greatest reward is seeing your vision come to life and witnessing the excitement in your eyes when you first view your story captured on film. Whether it's your wedding day, a live event, or any personal project, Dawn Infinite Imagery is here to ensure your unique story is told exactly how it deserves to be: authentically and beautifully.</p>
+  <p>For me, it's not just about clients. By the time we finish a project, we've become friends. The greatest reward is seeing your vision come to life and witnessing the excitement in your eyes when you first view your story captured on film. Whether it's your wedding day, a live event, or any personal project, Dawn Infinite Imagery is here to ensure your unique story is told exactly how it deserves to be: authentically and beautifully.</p>
 
-    <p><strong>Together, let's bring your cinematic vision to reality.</strong></p>
-  </div>
+  <p><strong>Together, let's bring your cinematic vision to reality.</strong></p>
+    </div>
   <div class="scroll-buffer"></div>
 </div>
 
