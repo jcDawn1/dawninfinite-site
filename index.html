@@ -18,28 +18,28 @@
     body {
       margin: 0;
       padding: 0;
-      font-family: 'Bebas Neue', sans-serif; /* Changed body font */
-      color: #eee; /* Almost-white text */
-      background-color: #1a1a1a; /* Dark charcoal background */
-      height: 100%;
+      font-family: 'Bebas Neue', sans-serif;
+      color: #eee;
+      background-color: #1a1a1a;
+      height: 100%; /* Remove if causing issues with content below */
       overflow-x: hidden;
       line-height: 1.6;
     }
 
-    /* Parallax Background */
+    /* Background Image */
     .parallax {
-      background-image: url('IMG_0243.jpg'); /*  USE JPG/WebP HERE  */
+      background-image: url('IMG_0243.jpg'); /* USE YOUR JPG/WEBP HERE */
       min-height: 100vh;
-      background-attachment: fixed;
+      /* REMOVED: background-attachment: fixed; */
       background-position: center;
       background-repeat: no-repeat;
-      background-size: cover; /* Fill the entire viewport */
+      background-size: cover;
       position: relative;
       display: flex;
       flex-direction: column;
       align-items: center;
       width: 100%;
-      filter: grayscale(100%); /* Black and white image */
+      filter: grayscale(100%);
     }
 
     /* Overlay for Readability */
@@ -50,7 +50,7 @@
       left: 0;
       width: 100%;
       height: 100%;
-      background-color: rgba(0, 0, 0, 0.6); /* Semi-transparent black overlay */
+      background-color: rgba(0, 0, 0, 0.6);
       z-index: 1;
     }
 
@@ -60,68 +60,67 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #1a1a1a; /* Matches body background */
+      background-color: #1a1a1a;
       padding: 0.5rem 1rem;
       z-index: 1002;
       display: flex;
-      justify-content: space-between; /* Space between logo and nav */
+      justify-content: space-between;
       align-items: center;
     }
 
     .header-image {
-      height: 50px; /* Slightly larger logo */
+      height: 50px;
       width: auto;
       margin-right: 1rem;
     }
 
     nav ul {
-      display: flex;
-      list-style: none;
-      padding: 0;
-      margin: 0;
+        display: flex;
+        list-style: none;
+        padding: 0;
+        margin: 0;
     }
 
     nav ul li {
-      margin: 0 1.5rem; /* More spacing between links */
+        margin: 0 1.5rem;
     }
-
     nav ul li a {
-      text-decoration: none;
-      color: #eee;
-      font-family: 'Rajdhani', sans-serif; /* Changed nav font */
-      font-weight: 700;
-      text-transform: uppercase; /* Uppercase for impact */
-      position: relative; /* For underline effect */
+        text-decoration: none;
+        color: #eee;
+        font-family: 'Rajdhani', sans-serif;
+        font-weight: 700;
+        text-transform: uppercase;
+        position: relative;
     }
-    /* Animated Underline on Hover */
-      nav ul li a::after {
-          content: '';
-          position: absolute;
-          bottom: -3px;
-          left: 0;
-          width: 0;
-          height: 2px;
-          background-color: #00ffff; /* Electric blue underline */
-          transition: width 0.3s ease;
-      }
 
-      nav ul li a:hover::after {
-          width: 100%;
-      }
+    nav ul li a::after {
+        content: '';
+        position: absolute;
+        bottom: -3px;
+        left: 0;
+        width: 0;
+        height: 2px;
+        background-color: #00ffff;
+        transition: width 0.3s ease;
+    }
+
+    nav ul li a:hover::after {
+        width: 100%;
+    }
 
     /* Main Content */
     .content-wrapper {
       margin: 3rem 0;
-      padding: 3rem; /* More generous padding */
+      padding: 3rem;
       text-align: center;
       position: relative;
-      z-index: 2; /* Above the overlay */
-      max-width: 800px; /* Limit content width for readability */
-      width: 90%; /* Responsive width */
+      z-index: 2;
+      max-width: 800px;
+      width: 90%;
     }
 
     .content-wrapper blockquote {
-      margin: 4rem 0; /* More spacing around quote */
+      margin: 4rem 0;
     }
 
     .content-wrapper h2 {
@@ -130,44 +129,44 @@
 
     .content-wrapper p {
       margin: 1.5rem 0;
-      font-size: 1.2rem; /* Slightly larger body text */
+      font-size: 1.2rem;
     }
-/*Call To aciton button*/
+
     .cta-button {
         display: inline-block;
         padding: 15px 30px;
-        background-color: #00ffff; /* Electric blue button */
-        color: #1a1a1a; /* Dark text on button */
+        background-color: #00ffff;
+        color: #1a1a1a;
         font-family: 'Rajdhani', sans-serif;
         font-weight: 700;
         text-transform: uppercase;
         text-decoration: none;
         border: none;
-        border-radius: 5px; /* Slightly rounded corners */
-        transition: background-color 0.3s ease, transform 0.2s ease; /* Smooth transitions */
+        border-radius: 5px;
+        transition: background-color 0.3s ease, transform 0.2s ease;
         margin-top: 20px;
-     }
+    }
 
-.cta-button:hover {
-    background-color: #00d4d4;
-    transform: scale(1.05); /* Slight scale-up on hover */
-    cursor: pointer;
-}
+    .cta-button:hover {
+        background-color: #00d4d4;
+        transform: scale(1.05);
+        cursor: pointer;
+    }
 
     /* Overlay Text */
     .parallax h1 {
-      font-family: 'Rajdhani', sans-serif; /* Changed heading font */
+      font-family: 'Rajdhani', sans-serif;
       color: #eee;
-      font-size: 5rem; /* Even larger heading */
-      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8); /* Darker, subtle shadow */
+      font-size: 5rem;
+      text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.8);
       text-align: center;
-      margin: 6rem 0 2rem; /* Adjust as needed */
+      margin: 6rem 0 2rem;
     }
 
     /* Quote Styling */
     blockquote {
-      font-family: 'Bebas Neue', cursive; /*Bold Font*/
-      font-size: 1.5rem; /* Larger quote */
+      font-family: 'Bebas Neue', cursive;
+      font-size: 1.5rem;
       font-style: italic;
       color: #eee;
       text-align: center;
@@ -183,20 +182,19 @@
     .content-wrapper h2,
     .content-wrapper p {
       color: #eee;
-      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7); /* Subtle shadow */
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
     }
 
     .content-wrapper h2 {
-      font-family: 'Rajdhani', sans-serif; /* Changed heading font */
-      font-size: 2.5rem; /* Larger heading */
+      font-family: 'Rajdhani', sans-serif;
+      font-size: 2.5rem;
     }
 
-    /* Scroll Buffer */
+    /* Scroll Buffer - Remove if no longer needed */
     .scroll-buffer {
       height: 100px;
     }
-
-    /* Footer */
+     /* Footer */
     footer {
       position: fixed;
       bottom: 0;
@@ -238,7 +236,8 @@
 <body>
 
 <header>
-  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="header-image">  <nav>
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="header-image">
+  <nav>
     <ul>
       <li><a href="index.html">Home</a></li>
       <li><a href="portfolio.html">Portfolio</a></li>
@@ -268,15 +267,22 @@
 
   <p><strong>Together, let's bring your cinematic vision to reality.</strong></p>
     </div>
-  <div class="scroll-buffer"></div>
-</div>
+  <div class="scroll-buffer"></div> </div>
 
 <footer>
   <div class="footer-content">
     <p>j_c@dawninfinite.com | (815)681-8696</p>
     <p><a href="https://www.facebook.com/profile.php?id=61573786563397" target="_blank">Visit Us On Facebook</a></p>
   </div>
-  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image"> </footer>
-
+  <img src="IMG_0143-removebg-preview.png" alt="Logo" class="footer-image">
+</footer>
+<script>
+    // Simple Parallax Effect (Optional)
+    window.addEventListener('scroll', function() {
+        let scrollPosition = window.pageYOffset;
+        let parallaxElement = document.querySelector('.parallax');
+        parallaxElement.style.backgroundPositionY = scrollPosition * 0.5 + 'px'; // Adjust 0.5 for speed
+    });
+</script>
 </body>
 </html>
