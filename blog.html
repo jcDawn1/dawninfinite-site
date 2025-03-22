@@ -3,8 +3,9 @@
 <head>
   <meta charset="UTF-8">
   <title>Blog - Dawn Infinite Imagery</title>
-  <link rel="preconnect" href="https://fonts.gstatic.com">
-  <link href="https://fonts.googleapis.com/css2?family=Lora&family=Montserrat:wght@400;700&family=Playfair+Display:wght@700&family=Roboto&display=swap" rel="stylesheet">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Rajdhani:wght@600;700&family=Bebas+Neue&family=Orbitron:wght@700&family=Roboto&display=swap" rel="stylesheet">
 
   <style>
     /* Reset Styles */
@@ -14,32 +15,46 @@
     *, *:before, *:after {
       box-sizing: inherit;
     }
+
+    /* Body Styles */
     body {
       margin: 0;
       padding: 0;
       font-family: 'Roboto', sans-serif;
-      background-color: #FFFDD0; /* Cream background */
+      color: #eee;
+      background-color: #1a1a1a;
       height: 100%;
       overflow-x: hidden;
       line-height: 1.6;
     }
 
-    /* Main Content Container */
-    .container {
-      max-width: 800px;
-      margin: 3rem auto;
-      padding: 1.5rem 3rem;
-      text-align: center;
+    /* Parallax Background with Grayscale */
+    .parallax {
+      background-image: url('ScreenWriter.png');
+      min-height: 100vh;
+      background-attachment: scroll;
+      background-position: center;
+      background-repeat: no-repeat;
+      background-size: cover;
       position: relative;
-      z-index: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      width: 100%;
+      filter: grayscale(100%);
+      z-index: 0;
     }
 
-    /* Content Box (Translucent Box Starting After Quote) */
-    .content-box {
-      background-color: rgba(255, 255, 255, 0.7); /* Translucent white to match contact form */
-      border-radius: 6px; /* Rounded corners to match contact form */
-      box-shadow: 2px 2px 8px rgba(0,0,0,0.3); /* Shadow to match contact form */
-      padding: 1.5rem 3rem; /* Match container padding */
+    /* Dark Overlay for Readability */
+    .parallax::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.6);
+      z-index: 1;
     }
 
     /* Fixed Header */
@@ -48,87 +63,113 @@
       top: 0;
       left: 0;
       width: 100%;
-      background-color: #3C2A1E; /* Unified dark brown */
+      background-color: #1a1a1a;
       padding: 0.5rem 1rem;
       z-index: 1002;
       display: flex;
       align-items: center;
     }
-
     .header-image {
-      height: 40px;
+      height: 50px;
       width: auto;
       margin-right: 1rem;
     }
-
-    nav {
-      flex: 1;
-    }
-
     nav ul {
       display: flex;
-      justify-content: center;
       list-style: none;
       padding: 0;
       margin: 0;
     }
-
     nav ul li {
-      margin: 0 1rem;
+      margin: 0 1.5rem;
     }
-
     nav ul li a {
       text-decoration: none;
-      color: #fff; /* White for nav links */
-      font-family: 'Montserrat', sans-serif;
+      color: #eee;
+      font-family: 'Rajdhani', sans-serif;
       font-weight: 700;
+      text-transform: uppercase;
+      position: relative;
+    }
+    nav ul li a::after {
+      content: '';
+      position: absolute;
+      bottom: -3px;
+      left: 0;
+      width: 0;
+      height: 2px;
+      background-color: #00ffff;
+      transition: width 0.3s ease;
+    }
+    nav ul li a:hover::after {
+      width: 100%;
     }
 
-    /* Quote Styling */
-    blockquote {
-      font-family: 'Lora', serif;
-      font-style: italic;
-      color: #7B3F00; /* Light brown for quote */
-      margin-bottom: 2rem;
+    /* Main Content Container */
+    .container {
+      margin: 3rem auto;
+      padding: 3rem;
       text-align: center;
-      text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+      position: relative;
+      z-index: 2;
+      max-width: 800px;
+      width: 90%;
     }
 
+    /* Quote Styling with Glow Effect */
+    blockquote {
+      font-family: 'Bebas Neue', cursive;
+      font-size: 2rem;
+      font-style: italic;
+      color: #eee;
+      text-align: center;
+      text-shadow: 0 0 20px #00ffff,
+                  0 0 30px #00ffff,
+                  0 0 10px #00ffff;
+      margin-bottom: 2rem;
+    }
     blockquote p {
-      text-align: right;
+      text-align: center;
       font-weight: bold;
-      margin-top: 0.5rem;
+      margin: 1rem 0 0;
+      text-shadow: 0 0 20px #00ffff,
+                  0 0 30px #00ffff,
+                  0 0 10px #00ffff;
     }
 
-    /* Blog Page Title and Text */
-    .content-box h1,
-    .content-box h2,
-    .content-box p {
-      color: #7B3F00; /* Light brown text */
-      text-shadow: 2px 2px 8px #7B3F00; /* Brown shadow matching other pages */
+    /* Headings and Paragraphs */
+    h1, h2 {
+      font-family: 'Rajdhani', sans-serif;
+      color: #eee;
+      text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7),
+                  0 0 5px rgba(0, 255, 255, 0.3);
     }
-
-    .content-box h1 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2.5rem;
+    h1 {
+      font-size: 3rem;
       margin-bottom: 1rem;
     }
-
-    .content-box h2 {
-      font-family: 'Playfair Display', serif;
-      font-size: 2rem;
+    h2 {
+      font-size: 2.5rem;
       margin: 1.5rem 0 1rem;
     }
-
-    /* Blog Post Links */
-    .content-box a {
-      color: #7B3F00; /* Light brown for links */
+    p {
+      color: #eee;
+      font-family: 'Roboto', sans-serif;
+      font-size: 1.2rem;
+      margin: 1rem 0;
+    }
+    a {
+      color: #00ffff;
       text-decoration: none;
       font-weight: bold;
     }
-
-    .content-box a:hover {
+    a:hover {
       text-decoration: underline;
+    }
+
+    /* Scroll Buffer */
+    .scroll-buffer {
+      height: 100px;
     }
 
     /* Footer */
@@ -136,38 +177,33 @@
       position: fixed;
       bottom: 0;
       width: 100%;
-      background-color: #3C2A1E; /* Matches header */
-      color: #fff; /* White for footer text */
+      background-color: #1a1a1a;
+      color: #eee;
       z-index: 1002;
       display: grid;
       grid-template-columns: 1fr auto 1fr;
       align-items: center;
       padding: 0.5rem 0;
     }
-
     .footer-content {
       grid-column: 2;
       text-align: center;
-      font-family: 'Montserrat', sans-serif;
+      font-family: 'Rajdhani', sans-serif;
       font-weight: bold;
     }
-
     .footer-image {
       grid-column: 3;
       justify-self: end;
-      height: 40px;
+      height: 50px;
       width: auto;
       margin-right: 1rem;
     }
-
     footer a {
-      color: #fff; /* White for footer links */
+      color: #00ffff;
       text-decoration: none;
     }
-
-    /* Buffer space at bottom */
-    .spacer {
-      height: 120px;
+    footer a:hover {
+      text-decoration: underline;
     }
   </style>
 </head>
@@ -187,33 +223,28 @@
   </nav>
 </header>
 
-<div class="container">
-  <blockquote>
-    "The whole point of taking pictures is so that you don’t have to explain things with words."
-    <p>— Elliott Erwitt</p>
-  </blockquote>
-
-  <div class="content-box">
+<div class="parallax">
+  <div class="container">
+    <blockquote>
+      "The whole point of taking pictures is so that you don’t have to explain things with words."
+      <p>— Elliott Erwitt</p>
+    </blockquote>
     <h1>🎥 Blog</h1>
     <p>Welcome to the Dawn Infinite Imagery blog, where I share insights, experiences, and stories from behind the lens. Dive into my journey as a videographer and explore the art of capturing life’s unscripted moments.</p>
-
     <h2>📅 Recent Posts</h2>
     <p><a href="blog-post-1.html">🎬 1 - The Art of Capturing Life: A Videographer’s Manifesto</a></p>
     <p>⏰ March 17, 2025</p>
     <p>A deep dive into my philosophy as a videographer—why I prioritize raw emotion ❤️ over staged perfection and how I capture the moments that truly matter. 💡</p>
-
     <h2>⏳ Coming Soon</h2>
     <p><a href="#">🎬 2 - Behind the Scenes: Filming a Live Concert</a></p>
     <p>⏰ April 2025</p>
     <p>A look at the challenges and thrills of capturing the energy of a live event, with tips for aspiring videographers. 🎤</p>
-
     <p><a href="#">🎬 3 - The Magic of Wedding Videography</a></p>
     <p>⏰ May 2025</p>
     <p>Exploring the art of filming weddings—how to anticipate emotional moments ❤️ and create a cinematic keepsake that lasts a lifetime. 🎞️</p>
   </div>
+  <div class="scroll-buffer"></div>
 </div>
-
-<div class="spacer"></div>
 
 <footer>
   <div class="footer-content">
